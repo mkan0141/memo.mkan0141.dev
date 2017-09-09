@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="AtCoder,C++,競プロ," />
 
 
 
@@ -94,13 +94,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="mkan&#39;s blog">
-<meta property="og:url" content="http://localhost:4000/index.html">
+<meta name="description" content="A問題整数が与えられ、その数字に「9」が含まれているか調べる問題。 解き方私は、与えられる整数を文字列として扱い、その文字列に’9’が含まれているかで判断した。 1234567int main()&amp;#123;  string s;  cin&amp;gt;&amp;gt;s;  if(s.find(&quot;9&quot;)!=-1)cout&amp;lt;&amp;lt;&quot;Yes&quot;&amp;lt;&amp;lt;endl;  else cout&amp;lt;&amp;lt;">
+<meta name="keywords" content="AtCoder,C++,競プロ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ABC073 (AtCoder Beginner Contest)">
+<meta property="og:url" content="http://localhost:4000/2017/09/10/ABC073-AtCoder-Beginner-Contest/index.html">
 <meta property="og:site_name" content="mkan&#39;s blog">
+<meta property="og:description" content="A問題整数が与えられ、その数字に「9」が含まれているか調べる問題。 解き方私は、与えられる整数を文字列として扱い、その文字列に’9’が含まれているかで判断した。 1234567int main()&amp;#123;  string s;  cin&amp;gt;&amp;gt;s;  if(s.find(&quot;9&quot;)!=-1)cout&amp;lt;&amp;lt;&quot;Yes&quot;&amp;lt;&amp;lt;endl;  else cout&amp;lt;&amp;lt;">
 <meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2017-09-09T17:14:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mkan&#39;s blog">
+<meta name="twitter:title" content="ABC073 (AtCoder Beginner Contest)">
+<meta name="twitter:description" content="A問題整数が与えられ、その数字に「9」が含まれているか調べる問題。 解き方私は、与えられる整数を文字列として扱い、その文字列に’9’が含まれているかで判断した。 1234567int main()&amp;#123;  string s;  cin&amp;gt;&amp;gt;s;  if(s.find(&quot;9&quot;)!=-1)cout&amp;lt;&amp;lt;&quot;Yes&quot;&amp;lt;&amp;lt;endl;  else cout&amp;lt;&amp;lt;">
 
 
 
@@ -129,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://localhost:4000/"/>
+  <link rel="canonical" href="http://localhost:4000/2017/09/10/ABC073-AtCoder-Beginner-Contest/"/>
 
 
 
 
 
-  <title>mkan's blog</title>
+  <title>ABC073 (AtCoder Beginner Contest) | mkan's blog</title>
   
 
 
@@ -160,9 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,9 +268,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -297,9 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/10/ABC073-AtCoder-Beginner-Contest/" itemprop="url">ABC073 (AtCoder Beginner Contest)</a></h1>
+          <h1 class="post-title" itemprop="name headline">ABC073 (AtCoder Beginner Contest)</h1>
         
 
         <div class="post-meta">
@@ -349,9 +350,7 @@
       
 
       
-        
-          
-            <h2 id="A問題"><a href="#A問題" class="headerlink" title="A問題"></a>A問題</h2><p>整数が与えられ、その数字に「9」が含まれているか調べる問題。</p>
+        <h2 id="A問題"><a href="#A問題" class="headerlink" title="A問題"></a>A問題</h2><p>整数が与えられ、その数字に「9」が含まれているか調べる問題。</p>
 <h1 id="解き方"><a href="#解き方" class="headerlink" title="解き方"></a>解き方</h1><p>私は、与えられる整数を文字列として扱い、その文字列に’9’が含まれているかで判断した。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">  <span class="built_in">string</span> s;</div><div class="line">  <span class="built_in">cin</span>&gt;&gt;s;</div><div class="line">  <span class="keyword">if</span>(s.find(<span class="string">"9"</span>)!=<span class="number">-1</span>)<span class="built_in">cout</span>&lt;&lt;<span class="string">"Yes"</span>&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">  <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;<span class="string">"No"</span>&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>s.find()の返り値は、文字列が見つかればその文字列が何番目にあるかを返し、もし存在しなければ-1を返します。</p>
@@ -367,8 +366,6 @@
 <p>ワーシャルフロイド方の説明はゆらふなさんの記事がわかりやすかったので貼っておきます。<br><a href="http://pakapa104.hatenablog.com/entry/2016/02/05/225241" target="_blank" rel="external">http://pakapa104.hatenablog.com/entry/2016/02/05/225241</a></p>
 <p>早く水色になりたいなぁー</p>
 
-          
-        
       
     </div>
     
@@ -383,134 +380,40 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2017/09/04/about/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mkan_0141">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://mkan0141.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mkan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/04/about/" itemprop="url">about</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-04T11:13:14+09:00">
-                2017-09-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/AtCoder/" rel="tag"># AtCoder</a>
           
-            
+            <a href="/tags/C/" rel="tag"># C++</a>
           
-
+            <a href="/tags/競プロ/" rel="tag"># 競プロ</a>
           
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>初めましてmkanです。読み方はみかんです。<br>このブログでは競技プログラミングや情報系のことを書こうと思ってます。<br>定期的にブログを更新していこうと思っているのでよろしくお願いします.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/04/about/" rel="next" title="about">
+                <i class="fa fa-chevron-left"></i> about
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -520,10 +423,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -531,6 +435,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -551,8 +459,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            見出し
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            概要
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://mkan0141.github.io/images/avatar.gif"
@@ -618,6 +535,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#A問題"><span class="nav-number">1.</span> <span class="nav-text">A問題</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解き方"><span class="nav-number"></span> <span class="nav-text">解き方</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#B問題"><span class="nav-number">1.</span> <span class="nav-text">B問題</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解き方-1"><span class="nav-number"></span> <span class="nav-text">解き方</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#C問題"><span class="nav-number">1.</span> <span class="nav-text">C問題</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解き方-2"><span class="nav-number"></span> <span class="nav-text">解き方</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#D問題"><span class="nav-number">1.</span> <span class="nav-text">D問題</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解き方-3"><span class="nav-number"></span> <span class="nav-text">解き方</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -731,10 +664,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
