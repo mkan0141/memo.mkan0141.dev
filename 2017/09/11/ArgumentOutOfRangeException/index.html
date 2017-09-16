@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Unity,C#,IOS," />
 
 
 
@@ -94,14 +94,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://localhost:4000/about/index.html">
+<meta name="description" content="注意自分はUnity初心者なので100%正しい情報を伝えられているかわかりません。ご了承の上お読みください。 本編UnityでIOS向けにbuildしたらConsoleに 12Cannot be negative.Parameter name: length とエラー出てきてbuildに失敗しまくり、2時間くらいこのエラーにはまりました…。 この時、実はエラーではなく警告に1Exception:">
+<meta name="keywords" content="Unity,C#,IOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UnityでArgumentOutOfRangeException: &quot;Cannot be negative.Parameter name: length&quot;っていうbuildエラーが出て困った話">
+<meta property="og:url" content="http://localhost:4000/2017/09/11/ArgumentOutOfRangeException/index.html">
 <meta property="og:site_name" content="mkan&#39;s blog">
+<meta property="og:description" content="注意自分はUnity初心者なので100%正しい情報を伝えられているかわかりません。ご了承の上お読みください。 本編UnityでIOS向けにbuildしたらConsoleに 12Cannot be negative.Parameter name: length とエラー出てきてbuildに失敗しまくり、2時間くらいこのエラーにはまりました…。 この時、実はエラーではなく警告に1Exception:">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2017-09-07T02:01:52.000Z">
+<meta property="og:updated_time" content="2017-09-16T15:15:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="UnityでArgumentOutOfRangeException: &quot;Cannot be negative.Parameter name: length&quot;っていうbuildエラーが出て困った話">
+<meta name="twitter:description" content="注意自分はUnity初心者なので100%正しい情報を伝えられているかわかりません。ご了承の上お読みください。 本編UnityでIOS向けにbuildしたらConsoleに 12Cannot be negative.Parameter name: length とエラー出てきてbuildに失敗しまくり、2時間くらいこのエラーにはまりました…。 この時、実はエラーではなく警告に1Exception:">
 
 
 
@@ -130,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://localhost:4000/about/"/>
+  <link rel="canonical" href="http://localhost:4000/2017/09/11/ArgumentOutOfRangeException/"/>
 
 
 
 
 
-  <title>about | mkan's blog</title>
+  <title>UnityでArgumentOutOfRangeException: "Cannot be negative.Parameter name: length"っていうbuildエラーが出て困った話 | mkan's blog</title>
   
 
 
@@ -267,33 +271,164 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2017/09/11/ArgumentOutOfRangeException/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mkan_0141">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://mkan0141.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mkan's blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">UnityでArgumentOutOfRangeException: "Cannot be negative.Parameter name: length"っていうbuildエラーが出て困った話</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">投稿日</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-11T17:09:24+09:00">
+                2017-09-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>自分はUnity初心者なので100%正しい情報を伝えられているかわかりません。ご了承の上お読みください。</p>
+<h2 id="本編"><a href="#本編" class="headerlink" title="本編"></a>本編</h2><p>UnityでIOS向けにbuildしたらConsoleに</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Cannot be negative.</div><div class="line">Parameter name: length</div></pre></td></tr></table></figure>
+<p>とエラー出てきてbuildに失敗しまくり、2時間くらいこのエラーにはまりました…。</p>
+<p>この時、実はエラーではなく警告に<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Exception: Error building Player: Exception: iPhoneBundleIdentifier has not been set up.</div></pre></td></tr></table></figure></p>
+<p>というのが表示されていました。<br>この警告は「bundle ID おかしくないですか？」という意味らしい(海外のサイト調べ)です。<br>この警告を取り除いたらなぜか”Cannot be negative.Parameter name: length”のエラーが消えました。</p>
+<h2 id="Bundle-ID"><a href="#Bundle-ID" class="headerlink" title="Bundle ID"></a>Bundle ID</h2><p>Bundle IDは[company nameの逆]にしなければいけないみたいです。</p>
+<p>例<br>company name -&gt; mkan.home.company<br>と設定していれば<br>Bundle ID -&gt; company.home.mkan<br>と設定しなければならないみたいです。</p>
+<p>bundle id の変更方法は簡単です。</p>
+<ol>
+<li>build settings -&gt; player settingsを押す。</li>
+<li>Others settingsのBundle Identifier の所の文字を変える</li>
+</ol>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Unity/" rel="tag"># Unity</a>
+          
+            <a href="/tags/C/" rel="tag"># C#</a>
+          
+            <a href="/tags/IOS/" rel="tag"># IOS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/10/ABC073 (AtCoder Beginner Contest)/" rel="next" title="ABC073 (AtCoder Beginner Contest)">
+                <i class="fa fa-chevron-left"></i> ABC073 (AtCoder Beginner Contest)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/15/Hexo-change-font/" rel="prev" title="hexoのデフォルトのフォントを変える方法">
+                hexoのデフォルトのフォントを変える方法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -326,8 +461,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            見出し
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            概要
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://mkan0141.github.io/images/avatar.gif"
@@ -393,6 +537,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#注意"><span class="nav-number">1.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本編"><span class="nav-number">2.</span> <span class="nav-text">本編</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bundle-ID"><span class="nav-number">3.</span> <span class="nav-text">Bundle ID</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -506,10 +666,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
