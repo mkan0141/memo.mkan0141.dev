@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="mkan&#39;s blog">
 <meta property="og:description" content="注意自分はUnity初心者なので100%正しい情報を伝えられているかわかりません。ご了承の上お読みください。 本編UnityでIOS向けにbuildしたらConsoleに 12Cannot be negative.Parameter name: length とエラー出てきてbuildに失敗しまくり、2時間くらいこのエラーにはまりました…。 この時、実はエラーではなく警告に1Exception:">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2017-09-16T15:15:04.000Z">
+<meta property="og:updated_time" content="2017-09-16T15:28:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UnityでArgumentOutOfRangeException: &quot;Cannot be negative.Parameter name: length&quot;っていうbuildエラーが出て困った話">
 <meta name="twitter:description" content="注意自分はUnity初心者なので100%正しい情報を伝えられているかわかりません。ご了承の上お読みください。 本編UnityでIOS向けにbuildしたらConsoleに 12Cannot be negative.Parameter name: length とエラー出てきてbuildに失敗しまくり、2時間くらいこのエラーにはまりました…。 この時、実はエラーではなく警告に1Exception:">
@@ -356,8 +356,8 @@
 <p>とエラー出てきてbuildに失敗しまくり、2時間くらいこのエラーにはまりました…。</p>
 <p>この時、実はエラーではなく警告に<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Exception: Error building Player: Exception: iPhoneBundleIdentifier has not been set up.</div></pre></td></tr></table></figure></p>
 <p>というのが表示されていました。<br>この警告は「bundle ID おかしくないですか？」という意味らしい(海外のサイト調べ)です。<br>この警告を取り除いたらなぜか”Cannot be negative.Parameter name: length”のエラーが消えました。</p>
-<h2 id="Bundle-ID"><a href="#Bundle-ID" class="headerlink" title="Bundle ID"></a>Bundle ID</h2><p>Bundle IDは[company nameの逆]にしなければいけないみたいです。</p>
-<p>例<br>company name -&gt; mkan.home.company<br>と設定していれば<br>Bundle ID -&gt; company.home.mkan<br>と設定しなければならないみたいです。</p>
+<h2 id="Bundle-ID"><a href="#Bundle-ID" class="headerlink" title="Bundle ID"></a>Bundle ID</h2><p>Bundle IDは[company nameの逆].[アプリ名]にしなければいけないみたいです。</p>
+<p>例<br>company name -&gt; mkan.home.company<br>アプリ名 -&gt; LikeOrange<br>と設定していれば<br>Bundle ID -&gt; company.home.mkan.LikeOrange<br>と設定しなければならないみたいです。</p>
 <p>bundle id の変更方法は簡単です。</p>
 <ol>
 <li>build settings -&gt; player settingsを押す。</li>
