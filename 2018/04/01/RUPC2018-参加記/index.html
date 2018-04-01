@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="競プロ,RUPC,合宿," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="RUPC参加前twitterで今年もあるよとのことだったので参戦。[https://atnd.org/events/94033:embed:cite] 1日目-立命館大学セット怒髪さん、masumiさん、ksawさんの4人でdmkmというチームで参加しました。自分はC問題を担当していましたが、解法が舞い降りてこなかったのですぐ助けてした。弱いね。結局解法を教えてもらったが実装できそうになかったので">
+<meta name="keywords" content="競プロ,RUPC,合宿">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RUPC2018 参加記">
+<meta property="og:url" content="http://localhost:4000/2018/04/01/RUPC2018-参加記/index.html">
+<meta property="og:site_name" content="mkan&#39;s blog">
+<meta property="og:description" content="RUPC参加前twitterで今年もあるよとのことだったので参戦。[https://atnd.org/events/94033:embed:cite] 1日目-立命館大学セット怒髪さん、masumiさん、ksawさんの4人でdmkmというチームで参加しました。自分はC問題を担当していましたが、解法が舞い降りてこなかったのですぐ助けてした。弱いね。結局解法を教えてもらったが実装できそうになかったので">
+<meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2018-04-01T14:15:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RUPC2018 参加記">
+<meta name="twitter:description" content="RUPC参加前twitterで今年もあるよとのことだったので参戦。[https://atnd.org/events/94033:embed:cite] 1日目-立命館大学セット怒髪さん、masumiさん、ksawさんの4人でdmkmというチームで参加しました。自分はC問題を担当していましたが、解法が舞い降りてこなかったのですぐ助けてした。弱いね。結局解法を教えてもらったが実装できそうになかったので">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://localhost:4000/2018/04/01/RUPC2018-参加記/"/>
+
+
+
+
+
+  <title>RUPC2018 参加記 | mkan's blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="ja">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">mkan's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">mkanの日記的なあれ</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            ホーム
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            タグ
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            カテゴリ
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            アーカイブ
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2018/04/01/RUPC2018-参加記/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mkan_0141">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mkan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">RUPC2018 参加記</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">投稿日</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-01T23:14:30+09:00">
+                2018-04-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="RUPC参加前"><a href="#RUPC参加前" class="headerlink" title="RUPC参加前"></a>RUPC参加前</h1><p>twitterで今年もあるよとのことだったので参戦。<br>[<a href="https://atnd.org/events/94033:embed:cite" target="_blank" rel="external">https://atnd.org/events/94033:embed:cite</a>]</p>
+<h1 id="1日目-立命館大学セット"><a href="#1日目-立命館大学セット" class="headerlink" title="1日目-立命館大学セット"></a>1日目-立命館大学セット</h1><p>怒髪さん、masumiさん、ksawさんの4人でdmkmというチームで参加しました。<br>自分はC問題を担当していましたが、解法が舞い降りてこなかったのですぐ助けてした。弱いね。<br>結局解法を教えてもらったが実装できそうになかったので怒髪さんに投げた。<br>E問題はksawさんが6通り辺をはってダイクストラやるだけ、と解法を教えてくれたので実装するもWA。<br>初期化の値が小さかったみたい。見事な戦犯をかます。<br>自分の仕事は以上で、チームとしては全完を成し遂げた。<br>チームメンバープロすぎる。</p>
+<h1 id="1日目-懇親会"><a href="#1日目-懇親会" class="headerlink" title="1日目-懇親会"></a>1日目-懇親会</h1><p>twitterでよく見かける人々と喋ったりした。<br>去年のようにキャベツが大量に残っていたわけじゃなく平和だった。<br>[<a href="https://twitter.com/mkan_0141/status/978227367578497024:embed#みかんは完食されていました嬉しいみかんー" target="_blank" rel="external">https://twitter.com/mkan_0141/status/978227367578497024:embed#みかんは完食されていました嬉しいみかんー</a> &gt;&lt; <a href="https://t.co/JMkAb93PH7" target="_blank" rel="external">https://t.co/JMkAb93PH7</a>]</p>
+<h1 id="2日目-会津大学セット"><a href="#2日目-会津大学セット" class="headerlink" title="2日目-会津大学セット"></a>2日目-会津大学セット</h1><p>2日目はtuki_remonさんとkeiさんでkankitukeiというチームで参加した。<br>由来はレモンとみかんで柑橘、keiさんなので系、で柑橘系（ 個人的にめっちゃ好きなチーム名 )  </p>
+<p>自分はB問題を解いて、あとはFとG問題の考察をした。</p>
+<p>Fは移動パターンが数通りしかないから筋肉で殴れそう。<br>実装バグらせそうだったのでtuki_remonさんに実装を任せる。</p>
+<p>Gは1つのペアで条件が成り立つなら優先的に消していき、それ以外のもので一般マッチングすればいいのでは？みたいな気持ちになった。<br>一般マッチングをどう実装すればいいのかわからなかったのでkeiさんに実装を任せる。<br>二人ともAC。はいプロ。</p>
+<p>考察を他人に教えるということに慣れてなかったので、つたない日本語で考察を二人に言って申し訳なかった…。</p>
+<p>この日は6完で、個人的にRUPC史上最も活躍した日だと思ってます。(ほんまか)</p>
+<p>[<a href="https://twitter.com/mkan_0141/status/978545434846089216:embed#I問題作問者にI問題のタイトルを叫びながらりんご潰して欲しい" target="_blank" rel="external">https://twitter.com/mkan_0141/status/978545434846089216:embed#I問題作問者にI問題のタイトルを叫びながらりんご潰して欲しい</a>]</p>
+<h1 id="2日目-懇親会"><a href="#2日目-懇親会" class="headerlink" title="2日目-懇親会"></a>2日目-懇親会</h1><p>初めて酎ハイをジョッキ2杯飲んだけど全く酔った感じがしなかった</p>
+<p>[<a href="https://twitter.com/mkan_0141/status/978593338721943553:embed#お前らレモン残すんじゃねえぞみかんとの約束だからな！" target="_blank" rel="external">https://twitter.com/mkan_0141/status/978593338721943553:embed#お前らレモン残すんじゃねえぞみかんとの約束だからな！</a> #rupc2018 <a href="https://t.co/rwfnUpRgvI" target="_blank" rel="external">https://t.co/rwfnUpRgvI</a>]</p>
+<p>[<a href="https://twitter.com/mkan_0141/status/978594531858776064:embed#レモン完食🍋🍋🍋🍋" target="_blank" rel="external">https://twitter.com/mkan_0141/status/978594531858776064:embed#レモン完食🍋🍋🍋🍋</a> #rupc2018 <a href="https://t.co/xLQaMGIfnm" target="_blank" rel="external">https://t.co/xLQaMGIfnm</a>]</p>
+<p>どっからどう見ても酔ってますね。はい。</p>
+<h1 id="3日目-北海道大学セット"><a href="#3日目-北海道大学セット" class="headerlink" title="3日目-北海道大学セット"></a>3日目-北海道大学セット</h1><p>3日目はjimmyさんとわたあめさんとでjwmというチームで参加。</p>
+<p>A問題は、はいという感じだったので実装AC<br>B問題はいつのまにかACされていた。</p>
+<p>C問題はわたあめさんから解法を聞くも実装方法がピンと思いつかず、ひどいソースコードになってしまった。その上ガバガバ実装だったので助けてもらいながらコードを修正する。これでいけるだろうということで提出するもWA。コンテスト中にはACできず。</p>
+<p>D問題はラスト１分を切っている状態でjimmyさんが通してた。プロ。</p>
+<p>結局この日は3完。知識不足というか実装力のなさを痛感した。</p>
+<p>終わってから番兵さんとTreeoneさんにC問題のコーナーケースを聞いて辛い気持ちになった。  </p>
+<p>[<a href="https://twitter.com/mkan_0141/status/978850667203788805:embed#C問題ゆるせん" target="_blank" rel="external">https://twitter.com/mkan_0141/status/978850667203788805:embed#C問題ゆるせん</a>]</p>
+<h1 id="その後"><a href="#その後" class="headerlink" title="その後"></a>その後</h1><p>RUPC参加者とにぼ二郎食べに行くぞー！！と思ったら定休日だったらしく別のラーメン屋に行った。<br>[<a href="https://twitter.com/mkan_0141/status/978884405459595265:embed#RUPC参加者とラ" target="_blank" rel="external">https://twitter.com/mkan_0141/status/978884405459595265:embed#RUPC参加者とラ</a> <a href="https://t.co/GfQGIY5MPR" target="_blank" rel="external">https://t.co/GfQGIY5MPR</a>]</p>
+<h1 id="最後に"><a href="#最後に" class="headerlink" title="最後に"></a>最後に</h1><p>チームを組んで競プロするのはやっぱり楽しかったし、自分よりはるかにできる人の考察を聞いたりするのはすごくタメになる。<br>それに競プロのモチベーションも高まったので参加してよかったと思う。</p>
+<p>次に参加するときには青くなっていたいなぁ</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/競プロ/" rel="tag"># 競プロ</a>
+          
+            <a href="/tags/RUPC/" rel="tag"># RUPC</a>
+          
+            <a href="/tags/合宿/" rel="tag"># 合宿</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/02/webpackで「Module-not-found-Error-Can-t-resolve-fs-」と出てきた時の対処法/" rel="next" title="webpackで「Module not found: Error: Can't resolve 'fs'」と出てきた時の対処法">
+                <i class="fa fa-chevron-left"></i> webpackで「Module not found: Error: Can't resolve 'fs'」と出てきた時の対処法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            見出し
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            概要
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <p class="site-author-name" itemprop="name">mkan_0141</p>
+            <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">ポスト</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">タグ</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RUPC参加前"><span class="nav-number">1.</span> <span class="nav-text">RUPC参加前</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1日目-立命館大学セット"><span class="nav-number">2.</span> <span class="nav-text">1日目-立命館大学セット</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1日目-懇親会"><span class="nav-number">3.</span> <span class="nav-text">1日目-懇親会</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2日目-会津大学セット"><span class="nav-number">4.</span> <span class="nav-text">2日目-会津大学セット</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2日目-懇親会"><span class="nav-number">5.</span> <span class="nav-text">2日目-懇親会</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3日目-北海道大学セット"><span class="nav-number">6.</span> <span class="nav-text">3日目-北海道大学セット</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#その後"><span class="nav-number">7.</span> <span class="nav-text">その後</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最後に"><span class="nav-number">8.</span> <span class="nav-text">最後に</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mkan_0141</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" href="https://hexo.io">Hexo</a></div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
