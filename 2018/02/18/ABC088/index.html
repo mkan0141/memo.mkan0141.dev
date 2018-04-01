@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="AtCoder,C++,競プロ,ABC," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="タイポとか色々やらかして辛いコンテストでした A - Infinite Coinshttps://beta.atcoder.jp/contests/abc088/tasks/abc088_a (N % 500 &amp;lt;= A)が成り立てばYesを出力すればよいよい12345678int main()&amp;#123;    int n, a;    cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; a;">
+<meta name="keywords" content="AtCoder,C++,競プロ,ABC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ABC088">
+<meta property="og:url" content="http://localhost:4000/2018/02/18/ABC088/index.html">
+<meta property="og:site_name" content="mkan&#39;s blog">
+<meta property="og:description" content="タイポとか色々やらかして辛いコンテストでした A - Infinite Coinshttps://beta.atcoder.jp/contests/abc088/tasks/abc088_a (N % 500 &amp;lt;= A)が成り立てばYesを出力すればよいよい12345678int main()&amp;#123;    int n, a;    cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; a;">
+<meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2018-04-01T06:09:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ABC088">
+<meta name="twitter:description" content="タイポとか色々やらかして辛いコンテストでした A - Infinite Coinshttps://beta.atcoder.jp/contests/abc088/tasks/abc088_a (N % 500 &amp;lt;= A)が成り立てばYesを出力すればよいよい12345678int main()&amp;#123;    int n, a;    cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; a;">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://localhost:4000/2018/02/18/ABC088/"/>
+
+
+
+
+
+  <title>ABC088 | mkan's blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="ja">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">mkan's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">mkanの日記的なあれ</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            ホーム
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            タグ
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            カテゴリ
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            アーカイブ
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2018/02/18/ABC088/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mkan_0141">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mkan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ABC088</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">投稿日</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-18T01:05:30+09:00">
+                2018-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>タイポとか色々やらかして辛いコンテストでした</p>
+<h1 id="A-Infinite-Coins"><a href="#A-Infinite-Coins" class="headerlink" title="A - Infinite Coins"></a>A - Infinite Coins</h1><p><a href="https://beta.atcoder.jp/contests/abc088/tasks/abc088_a" target="_blank" rel="external">https://beta.atcoder.jp/contests/abc088/tasks/abc088_a</a></p>
+<p>(N % 500 &lt;= A)が成り立てばYesを出力すればよいよい<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> n, a;</div><div class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; a;</div><div class="line">    n %= <span class="number">500</span>;</div><div class="line">    <span class="keyword">if</span>(n &lt;= a)<span class="built_in">cout</span> &lt;&lt; <span class="string">"Yes"</span> &lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; <span class="string">"No"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="B-Card-Game-for-Two"><a href="#B-Card-Game-for-Two" class="headerlink" title="B - Card Game for Two"></a>B - Card Game for Two</h1><p><a href="https://beta.atcoder.jp/contests/abc088/tasks/abc088_b" target="_blank" rel="external">https://beta.atcoder.jp/contests/abc088/tasks/abc088_b</a></p>
+<p>両者とも最大になるようにカードを取っていくのだから当然数字が大きいカードから取っていくのでそれをシュミレーションする。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">    <span class="keyword">int</span> a[<span class="number">105</span>];</div><div class="line">    <span class="built_in">cin</span> &gt;&gt; n;</div><div class="line">    <span class="keyword">int</span> aa = <span class="number">0</span>, b = <span class="number">0</span>;</div><div class="line">    rep(i, n)<span class="built_in">cin</span> &gt;&gt; a[i];</div><div class="line">    sort(a, a + n, greater&lt;<span class="keyword">int</span>&gt;());</div><div class="line">    rep(i, n)&#123;</div><div class="line">        <span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span>)aa += a[i];</div><div class="line">        <span class="keyword">else</span> b += a[i];</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">abs</span>(aa - b) &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="C-Takahashi’s-Information"><a href="#C-Takahashi’s-Information" class="headerlink" title="C - Takahashi’s Information"></a>C - Takahashi’s Information</h1><p><a href="https://beta.atcoder.jp/contests/abc088/tasks/abc088_c" target="_blank" rel="external">https://beta.atcoder.jp/contests/abc088/tasks/abc088_c</a></p>
+<p>a1, a2, a3の値が決まったとすると、b1, b2, b3がどんな値を取っても a1 と a2 を使ったマスの差はどの行を見ても同じで、同じく a2 と a3 を使ったマスの差もどの行を見ても同じである規則性(?)がある。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> c[<span class="number">4</span>][<span class="number">4</span>];</div><div class="line">    rep(i, <span class="number">3</span>)&#123;</div><div class="line">        rep(j, <span class="number">3</span>)&#123;</div><div class="line">            <span class="built_in">cin</span> &gt;&gt; c[i][j];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span>(c[<span class="number">0</span>][<span class="number">0</span>] - c[<span class="number">0</span>][<span class="number">1</span>] == c[<span class="number">1</span>][<span class="number">0</span>] - c[<span class="number">1</span>][<span class="number">1</span>] &amp;&amp; c[<span class="number">1</span>][<span class="number">0</span>] - c[<span class="number">1</span>][<span class="number">1</span>] == c[<span class="number">2</span>][<span class="number">0</span>] - c[<span class="number">2</span>][<span class="number">1</span>] &amp;&amp;</div><div class="line">       c[<span class="number">0</span>][<span class="number">1</span>] - c[<span class="number">0</span>][<span class="number">2</span>] == c[<span class="number">1</span>][<span class="number">1</span>] - c[<span class="number">1</span>][<span class="number">2</span>] &amp;&amp; c[<span class="number">1</span>][<span class="number">1</span>] - c[<span class="number">1</span>][<span class="number">2</span>] == c[<span class="number">2</span>][<span class="number">1</span>] - c[<span class="number">2</span>][<span class="number">2</span>])&#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Yes"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"No"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>if文が長くなってすっごい見づらいな…</p>
+<h1 id="D-Grid-Repainting"><a href="#D-Grid-Repainting" class="headerlink" title="D - Grid Repainting"></a>D - Grid Repainting</h1><p><a href="https://beta.atcoder.jp/contests/abc088/tasks/abc088_d" target="_blank" rel="external">https://beta.atcoder.jp/contests/abc088/tasks/abc088_d</a></p>
+<p>自分の大好きなアルゴリズムはBFSなのででてきたときは興奮した:dohentai:<br>や、BFSって真面目にコツコツとする感じが可愛いでしょ？可愛いですね。</p>
+<p>BFSでスタートからゴールまでの最短距離を計算して、(‘ . ‘の数 - 最短距離 - 1)が最大スコアになる。<br>最後の -1 はゴールの部分は’ . ‘にしておく必要があるからです。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> h, w;</div><div class="line"><span class="keyword">int</span> d[<span class="number">55</span>][<span class="number">55</span>];</div><div class="line"><span class="keyword">char</span> s[<span class="number">55</span>][<span class="number">55</span>];</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">BFS</span><span class="params">()</span></span>&#123;</div><div class="line">    rep(i, <span class="number">55</span>)rep(j, <span class="number">55</span>)d[i][j] = INF;</div><div class="line">    d[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</div><div class="line">    <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</div><div class="line">    q.push(<span class="number">0</span>);q.push(<span class="number">0</span>);</div><div class="line">    <span class="keyword">while</span>(q.size())&#123;</div><div class="line">        <span class="keyword">int</span> x = q.front(); q.pop();</div><div class="line">        <span class="keyword">int</span> y = q.front(); q.pop();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>; i++)&#123;</div><div class="line">            <span class="keyword">int</span> xx = x + dx[i];</div><div class="line">            <span class="keyword">int</span> yy = y + dy[i];</div><div class="line">            <span class="keyword">if</span>(<span class="number">0</span> &lt;= xx &amp;&amp; xx &lt;= w &amp;&amp; <span class="number">0</span> &lt;= yy &amp;&amp; yy &lt;= h &amp;&amp; s[yy][xx] == <span class="string">'.'</span>)&#123;</div><div class="line">                s[yy][xx] = <span class="string">'#'</span>;</div><div class="line">                d[yy][xx] = min(d[yy][xx], d[y][x] + <span class="number">1</span>);</div><div class="line">                q.push(xx);q.push(yy);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> cnt = <span class="number">0</span>;</div><div class="line">    <span class="built_in">cin</span> &gt;&gt; h &gt;&gt; w;</div><div class="line">    rep(i, h)rep(j, w)&#123;</div><div class="line">        <span class="built_in">cin</span> &gt;&gt; s[i][j];</div><div class="line">        <span class="keyword">if</span>(s[i][j] == <span class="string">'.'</span>)cnt++;</div><div class="line">    &#125;</div><div class="line">    h--; w--;</div><div class="line">    BFS();</div><div class="line">    <span class="keyword">if</span>(d[h][w] == INF)<span class="built_in">cout</span> &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; max(<span class="number">0</span>, cnt - d[h][w] - <span class="number">1</span>)&lt;&lt; <span class="built_in">endl</span>; </div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AtCoder/" rel="tag"># AtCoder</a>
+          
+            <a href="/tags/C/" rel="tag"># C++</a>
+          
+            <a href="/tags/競プロ/" rel="tag"># 競プロ</a>
+          
+            <a href="/tags/ABC/" rel="tag"># ABC</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/17/ABC074-AtCoder-Beginner-Contest/" rel="next" title="ABC074(AtCoder Beginner Contest)">
+                <i class="fa fa-chevron-left"></i> ABC074(AtCoder Beginner Contest)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/02/webpackで「Module-not-found-Error-Can-t-resolve-fs-」と出てきた時の対処法/" rel="prev" title="webpackで「Module not found: Error: Can't resolve 'fs'」と出てきた時の対処法">
+                webpackで「Module not found: Error: Can't resolve 'fs'」と出てきた時の対処法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            見出し
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            概要
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <p class="site-author-name" itemprop="name">mkan_0141</p>
+            <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">ポスト</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">タグ</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-Infinite-Coins"><span class="nav-number">1.</span> <span class="nav-text">A - Infinite Coins</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B-Card-Game-for-Two"><span class="nav-number">2.</span> <span class="nav-text">B - Card Game for Two</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-Takahashi’s-Information"><span class="nav-number">3.</span> <span class="nav-text">C - Takahashi’s Information</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#D-Grid-Repainting"><span class="nav-number">4.</span> <span class="nav-text">D - Grid Repainting</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mkan_0141</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" href="https://hexo.io">Hexo</a></div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
