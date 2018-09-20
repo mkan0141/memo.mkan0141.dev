@@ -275,6 +275,135 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2018/09/20/AOJ2613-Unordered-Operators/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mkan_0141">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mkan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/20/AOJ2613-Unordered-Operators/" itemprop="url">AOJ2613 Unordered Operators</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">投稿日</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-20T19:42:15+09:00">
+                2018-09-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>※構文解析パートは<a href="https://gist.github.com/draftcode/1357281" target="_blank" rel="external">構文解析Howto</a>を見て書いています．</p>
+<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>‘+’ , ‘-‘, ‘*’の3つの演算子を使った式が与えられる．<br>それぞれの演算子の優先順位を変えて得られる値の最大値を求めろ．</p>
+<h2 id="解法-もとい実装方法"><a href="#解法-もとい実装方法" class="headerlink" title="解法(もとい実装方法)"></a>解法(もとい実装方法)</h2><p><a href="http://noy.hatenablog.jp/entry/2017/05/22/121607#Unordered-Operators--Aizu-Online-Judge" target="_blank" rel="external">notさんの解法記事</a>にも書かれているが，優先順位が全て同じ時は以下のコードになる．</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = term(begin);</div><div class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (*begin == <span class="string">'+'</span>) &#123;</div><div class="line">      begin++;</div><div class="line">      ret += term(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'-'</span>) &#123;</div><div class="line">      begin++;</div><div class="line">      ret -= term(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'*'</span>) &#123;</div><div class="line">      begin++;</div><div class="line">      ret *= term(begin);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>このコードを3つ複製して，それぞれに優先順位をつけるような条件式を付け加えれば，優先順位が3つあるコードが出来上がる．</p>
+<p>次に優先順位の実装を考える．<br>今回は3bitの数字3つ(priority[3])で管理する．3bitの数字は，1bit目が立っていれば’+’，2bit目が立っていれば’-‘，3bit目が立っていれば’*’を使うことを表し，3つの数字はそれぞれの優先順位を表す．例えば以下のようになる．<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">priority[<span class="number">0</span>] = (<span class="number">001</span>) <span class="comment">// 三番目に優先順位が高いのは '+'</span></div><div class="line">priority[<span class="number">1</span>] = (<span class="number">100</span>) <span class="comment">// 二番目に優先順位が高いのは '*'</span></div><div class="line">priority[<span class="number">2</span>] = (<span class="number">010</span>) <span class="comment">// 最も優先順位が高いのは '-'</span></div></pre></td></tr></table></figure></p>
+<p>上記のコードにこの優先順位を適応させたコードは以下のようになる．</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 一番目に優先順位が高いやつ */</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression3</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = factor(begin);</div><div class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (*begin == <span class="string">'+'</span> &amp;&amp; priority[<span class="number">2</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">0</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret += factor(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'-'</span> &amp;&amp; priority[<span class="number">2</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">1</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret -= factor(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'*'</span> &amp;&amp; priority[<span class="number">2</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">2</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret *= factor(begin);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 二番目に優先順位が高いやつ */</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression2</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = expression3(begin);</div><div class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (*begin == <span class="string">'+'</span> &amp;&amp; priority[<span class="number">1</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">0</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret += expression3(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'-'</span> &amp;&amp; priority[<span class="number">1</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">1</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret -= expression3(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'*'</span> &amp;&amp; priority[<span class="number">1</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">2</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret *= expression3(begin);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 三番目に優先順位が高いやつ */</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression1</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = expression2(begin);</div><div class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (*begin == <span class="string">'+'</span> &amp;&amp; priority[<span class="number">0</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">0</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret += expression2(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'-'</span> &amp;&amp; priority[<span class="number">0</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">1</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret -= expression2(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'*'</span> &amp;&amp; priority[<span class="number">0</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">2</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret *= expression2(begin);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>これを使って，優先順位を全通り試せば答えが出る．</p>
+<h2 id="ソースコード"><a href="#ソースコード" class="headerlink" title="ソースコード"></a>ソースコード</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long</span></div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="built_in">string</span>::const_iterator State;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">number</span><span class="params">(State &amp;begin)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">factor</span><span class="params">(State &amp;begin)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression1</span><span class="params">(State &amp;begin)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression2</span><span class="params">(State &amp;begin)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression3</span><span class="params">(State &amp;begin)</span></span>;</div><div class="line"></div><div class="line"><span class="comment">/* 優先順位を格納する配列 */</span></div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; priority(<span class="number">3</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">number</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = <span class="number">0</span>;</div><div class="line">  <span class="keyword">while</span> (<span class="built_in">isdigit</span>(*begin)) &#123;</div><div class="line">    ret *= <span class="number">10</span>;</div><div class="line">    ret += (*begin) - <span class="string">'0'</span>;</div><div class="line">    begin++;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">factor</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret;</div><div class="line">  <span class="keyword">if</span> (*begin == <span class="string">'('</span>) &#123;</div><div class="line">    begin++;</div><div class="line">    ret = expression1(begin);</div><div class="line">    begin++;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    ret = number(begin);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 一番目に優先順位が高いやつ */</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression3</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = factor(begin);</div><div class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (*begin == <span class="string">'+'</span> &amp;&amp; priority[<span class="number">2</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">0</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret += factor(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'-'</span> &amp;&amp; priority[<span class="number">2</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">1</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret -= factor(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'*'</span> &amp;&amp; priority[<span class="number">2</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">2</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret *= factor(begin);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 二番目に優先順位が高いやつ */</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression2</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = expression3(begin);</div><div class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (*begin == <span class="string">'+'</span> &amp;&amp; priority[<span class="number">1</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">0</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret += expression3(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'-'</span> &amp;&amp; priority[<span class="number">1</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">1</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret -= expression3(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'*'</span> &amp;&amp; priority[<span class="number">1</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">2</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret *= expression3(begin);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 三番目に優先順位が高いやつ */</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression1</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = expression2(begin);</div><div class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (*begin == <span class="string">'+'</span> &amp;&amp; priority[<span class="number">0</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">0</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret += expression2(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'-'</span> &amp;&amp; priority[<span class="number">0</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">1</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret -= expression2(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'*'</span> &amp;&amp; priority[<span class="number">0</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">2</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret *= expression2(begin);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">  <span class="built_in">string</span> s;</div><div class="line">  <span class="built_in">cin</span> &gt;&gt; s;</div><div class="line">  <span class="keyword">int</span> ans = LLONG_MIN;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (<span class="number">1</span> &lt;&lt; <span class="number">3</span>); i++) &#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; (<span class="number">1</span> &lt;&lt; <span class="number">3</span>); j++) &#123;</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; (<span class="number">1</span> &lt;&lt; <span class="number">3</span>); k++) &#123;</div><div class="line">        <span class="comment">/* 各bitが1つずつ立っていればいいので */</span></div><div class="line">        <span class="keyword">if</span> ((__builtin_popcount(i) + __builtin_popcount(j) + __builtin_popcount(k)) != <span class="number">3</span> || (i | j | k) != <span class="number">7</span>)</div><div class="line">          <span class="keyword">continue</span>;</div><div class="line">        priority[<span class="number">0</span>] = i;</div><div class="line">        priority[<span class="number">1</span>] = j;</div><div class="line">        priority[<span class="number">2</span>] = k;</div><div class="line">        State begin = s.begin();</div><div class="line">        ans = max(ans, expression1(begin));</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://localhost:4000/2018/04/01/RUPC2018-参加記/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1341,7 +1470,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">ポスト</span>
               </a>
             </div>
@@ -1354,7 +1483,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">タグ</span>
               </a>
             </div>
