@@ -1,1693 +1,453 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Hugo Future Imperfect Slim</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
-  
+  <meta name="generator" content="Hugo 0.60.1" />
+  <meta itemprop="name" content="Hugo Future Imperfect Slim">
+<meta itemprop="description" content="">
+  <meta property="og:title" content="Hugo Future Imperfect Slim" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://example.com/" />
+<meta property="og:updated_time" content="2019-12-08T00:00:00+00:00" />
 
-
-<html class="theme-next mist use-motion" lang="ja">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo Future Imperfect Slim"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@example"/>
 
   
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-  
-  
-  
-  
-
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
   
     
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+      
+      <link rel="stylesheet" href="/css/main.min.7d4da67976964ac3d77adcc182c740c02dc02f8c7298565bae5ea7406f3a55b5.css" integrity="sha256-fU2meXaWSsPXetzBgsdAwC3AL4xymFZbrl6nQG86VbU=">
+      <link rel="stylesheet" href="/css/add-on.css">
     
   
-
   
-
   
-
-  
-
-  
-
   
     
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="mkan&#39;s blog">
-<meta property="og:url" content="http://localhost:4000/index.html">
-<meta property="og:site_name" content="mkan&#39;s blog">
-<meta property="og:locale" content="ja">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mkan&#39;s blog">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-3203171790690571",
-          enable_page_level_ads: true
-     });
-</script>
-
-
-  <link rel="canonical" href="http://localhost:4000/"/>
-
-
-
-
-
-  <title>mkan's blog</title>
-  
-
-
-
-
-
-
-
-
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="ja">
-
-  
-  
+  <body>
     
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">mkan's blog</span>
-        <span class="logo-line-after"><i></i></span>
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          ざつなにっき
+        
       </a>
-    </div>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
       
-        <p class="site-subtitle">mkanの日記的なあれ</p>
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
       
-  </div>
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/contact/" class="link"><i class='far fa-envelope'></i> Contact</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="en" class="link active">English (en)</a>
+  
+      <a href="https://example.com/de/" lang="de" class="link">Deutsch (de)</a>
+    
+      <a href="https://example.com/fr/" lang="fr" class="link">Franﾃｧais (fr)</a>
+    
+      <a href="https://example.com/pl/" lang="pl" class="link">Polski (pl)</a>
+    
+      <a href="https://example.com/pt/" lang="pt" class="link">Portuguﾃｪs (pt)</a>
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Hugo%20Future%20Imperfect%20Slim&amp;url=https%3a%2f%2fexample.com%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.com%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fexample.com%2f&amp;title=Hugo%20Future%20Imperfect%20Slim" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fexample.com%2f&amp;title=Hugo%20Future%20Imperfect%20Slim" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fexample.com%2f&amp;description=Hugo%20Future%20Imperfect%20Slim" target="_blank" rel="noopener" class="share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fexample.com%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="/img/main/logo.jpg" class="circle" width="" alt="Hugo Future Imperfect Slim" /></a>
+  <header>
+    <h1>Hugo Future Imperfect Slim</h1>
+  </header>
+  <main>
+    <p>Another fine, responsive site template by <a href='http://html5up.net'>HTML5 UP</a>.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+    <li><a href="/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fas fa-rss"></a></li>
+
+
+        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+<li><a href="//flickr.com/photos/example" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+
+
+<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+<li><a href="//facebook.com/example" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/example" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+
+
+
+
+
+
+
+<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/example" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+<li><a href="//pinterest.com/example" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/example" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+<li><a href="//researchgate.net/profile/example" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+<li><a href="//keybase.io/example" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//example.com/@example" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+        
+          <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/blog/first/">初めての投稿</a></h2>
+    
+    
+        <p>初めての投稿</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2019-12-08 00:00:00 &#43;0000 UTC">
+      December 8, 2019
+    </time>
+    <span class="author">mkan0141</span>
+    
+      <p>1 minute read</p>
+    
   </div>
+</header>
+
+  
+  <a href="/blog/first/" class="image featured">
+    
+      <img src="/images/noa.png" alt="">
+    
+  </a>
+
+
+  
+  <p>初めまして。みかんです。<br>
+以前まではHexo + GitHub Pagesでブログを書いていたんですが、Hexoで使っていた自分用にカスタマイズしていたテーマをうっかり消してしまいた&hellip;。というわけで、この機会にHexoからHugoに変えてみました。<br>
+現在は<a href="https://themes.gohugo.io/future-imperfect/">HUGO FUTURE IMPERFECT SLIM</a>というテーマを使っています。なんかシンプルでいい感じですね。<br>
+これを気に色々記事を書くようになればいいですね&hellip;</p>
+  <footer>
+    <a href="/blog/first/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://example.com/categories/"></a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    <li class="tags">
+      <ul>
+        <li>None</li>
+      </ul>
+    </li>
+  
+</ul>
+
+  </footer>
+</article>
+
+        
+        
+<div class="pagination">
+  
+    <a href="#" class="disabled button big previous"><i class="fas fa-angle-left"></i></a>
+  
+  
+    <a href="#" class="disabled button big next"><i class="fas fa-angle-right"></i></a>
+  
 </div>
 
-<nav class="site-nav">
+      </main>
+      <section id="site-sidebar">
   
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            ホーム
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            About
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            タグ
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            カテゴリ
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            アーカイブ
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2018/09/20/AOJ2613-Unordered-Operators/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mkan_0141">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mkan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/20/AOJ2613-Unordered-Operators/" itemprop="url">AOJ2613 Unordered Operators</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-20T19:42:15+09:00">
-                2018-09-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
       </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-      
-
-      
-        
+      <article class="mini-post">
+        <section>
           
-            <p>※構文解析パートは<a href="https://gist.github.com/draftcode/1357281" target="_blank" rel="external">構文解析Howto</a>を見て書いています．</p>
-<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>‘+’ , ‘-‘, ‘*’の3つの演算子を使った式が与えられる．<br>それぞれの演算子の優先順位を変えて得られる値の最大値を求めろ．</p>
-<h2 id="解法-もとい実装方法"><a href="#解法-もとい実装方法" class="headerlink" title="解法(もとい実装方法)"></a>解法(もとい実装方法)</h2><p><a href="http://noy.hatenablog.jp/entry/2017/05/22/121607#Unordered-Operators--Aizu-Online-Judge" target="_blank" rel="external">notさんの解法記事</a>にも書かれているが，優先順位が全て同じ時は以下のコードになる．</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = term(begin);</div><div class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (*begin == <span class="string">'+'</span>) &#123;</div><div class="line">      begin++;</div><div class="line">      ret += term(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'-'</span>) &#123;</div><div class="line">      begin++;</div><div class="line">      ret -= term(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'*'</span>) &#123;</div><div class="line">      begin++;</div><div class="line">      ret *= term(begin);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>このコードを3つ複製して，それぞれに優先順位をつけるような条件式を付け加えれば，優先順位が3つあるコードが出来上がる．</p>
-<p>次に優先順位の実装を考える．<br>今回は3bitの数字3つ(priority[3])で管理する．3bitの数字は，1bit目が立っていれば’+’，2bit目が立っていれば’-‘，3bit目が立っていれば’*’を使うことを表し，3つの数字はそれぞれの優先順位を表す．例えば以下のようになる．<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">priority[<span class="number">0</span>] = (<span class="number">001</span>) <span class="comment">// 三番目に優先順位が高いのは '+'</span></div><div class="line">priority[<span class="number">1</span>] = (<span class="number">100</span>) <span class="comment">// 二番目に優先順位が高いのは '*'</span></div><div class="line">priority[<span class="number">2</span>] = (<span class="number">010</span>) <span class="comment">// 最も優先順位が高いのは '-'</span></div></pre></td></tr></table></figure></p>
-<p>上記のコードにこの優先順位を適応させたコードは以下のようになる．</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 一番目に優先順位が高いやつ */</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression3</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = factor(begin);</div><div class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (*begin == <span class="string">'+'</span> &amp;&amp; priority[<span class="number">2</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">0</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret += factor(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'-'</span> &amp;&amp; priority[<span class="number">2</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">1</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret -= factor(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'*'</span> &amp;&amp; priority[<span class="number">2</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">2</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret *= factor(begin);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 二番目に優先順位が高いやつ */</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression2</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = expression3(begin);</div><div class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (*begin == <span class="string">'+'</span> &amp;&amp; priority[<span class="number">1</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">0</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret += expression3(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'-'</span> &amp;&amp; priority[<span class="number">1</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">1</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret -= expression3(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'*'</span> &amp;&amp; priority[<span class="number">1</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">2</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret *= expression3(begin);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 三番目に優先順位が高いやつ */</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression1</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = expression2(begin);</div><div class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (*begin == <span class="string">'+'</span> &amp;&amp; priority[<span class="number">0</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">0</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret += expression2(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'-'</span> &amp;&amp; priority[<span class="number">0</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">1</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret -= expression2(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'*'</span> &amp;&amp; priority[<span class="number">0</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">2</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret *= expression2(begin);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>これを使って，優先順位を全通り試せば答えが出る．</p>
-<h2 id="ソースコード"><a href="#ソースコード" class="headerlink" title="ソースコード"></a>ソースコード</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long</span></div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="built_in">string</span>::const_iterator State;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">number</span><span class="params">(State &amp;begin)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">factor</span><span class="params">(State &amp;begin)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression1</span><span class="params">(State &amp;begin)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression2</span><span class="params">(State &amp;begin)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression3</span><span class="params">(State &amp;begin)</span></span>;</div><div class="line"></div><div class="line"><span class="comment">/* 優先順位を格納する配列 */</span></div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; priority(<span class="number">3</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">number</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = <span class="number">0</span>;</div><div class="line">  <span class="keyword">while</span> (<span class="built_in">isdigit</span>(*begin)) &#123;</div><div class="line">    ret *= <span class="number">10</span>;</div><div class="line">    ret += (*begin) - <span class="string">'0'</span>;</div><div class="line">    begin++;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">factor</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret;</div><div class="line">  <span class="keyword">if</span> (*begin == <span class="string">'('</span>) &#123;</div><div class="line">    begin++;</div><div class="line">    ret = expression1(begin);</div><div class="line">    begin++;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    ret = number(begin);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 一番目に優先順位が高いやつ */</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression3</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = factor(begin);</div><div class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (*begin == <span class="string">'+'</span> &amp;&amp; priority[<span class="number">2</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">0</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret += factor(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'-'</span> &amp;&amp; priority[<span class="number">2</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">1</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret -= factor(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'*'</span> &amp;&amp; priority[<span class="number">2</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">2</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret *= factor(begin);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 二番目に優先順位が高いやつ */</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression2</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = expression3(begin);</div><div class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (*begin == <span class="string">'+'</span> &amp;&amp; priority[<span class="number">1</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">0</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret += expression3(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'-'</span> &amp;&amp; priority[<span class="number">1</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">1</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret -= expression3(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'*'</span> &amp;&amp; priority[<span class="number">1</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">2</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret *= expression3(begin);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 三番目に優先順位が高いやつ */</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">expression1</span><span class="params">(State &amp;begin)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> ret = expression2(begin);</div><div class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (*begin == <span class="string">'+'</span> &amp;&amp; priority[<span class="number">0</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">0</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret += expression2(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'-'</span> &amp;&amp; priority[<span class="number">0</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">1</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret -= expression2(begin);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (*begin == <span class="string">'*'</span> &amp;&amp; priority[<span class="number">0</span>] &amp; (<span class="number">1</span> &lt;&lt; <span class="number">2</span>)) &#123;</div><div class="line">      begin++;</div><div class="line">      ret *= expression2(begin);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">  <span class="built_in">string</span> s;</div><div class="line">  <span class="built_in">cin</span> &gt;&gt; s;</div><div class="line">  <span class="keyword">int</span> ans = LLONG_MIN;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (<span class="number">1</span> &lt;&lt; <span class="number">3</span>); i++) &#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; (<span class="number">1</span> &lt;&lt; <span class="number">3</span>); j++) &#123;</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; (<span class="number">1</span> &lt;&lt; <span class="number">3</span>); k++) &#123;</div><div class="line">        <span class="comment">/* 各bitが1つずつ立っていればいいので */</span></div><div class="line">        <span class="keyword">if</span> ((__builtin_popcount(i) + __builtin_popcount(j) + __builtin_popcount(k)) != <span class="number">3</span> || (i | j | k) != <span class="number">7</span>)</div><div class="line">          <span class="keyword">continue</span>;</div><div class="line">        priority[<span class="number">0</span>] = i;</div><div class="line">        priority[<span class="number">1</span>] = j;</div><div class="line">        priority[<span class="number">2</span>] = k;</div><div class="line">        State begin = s.begin();</div><div class="line">        ans = max(ans, expression1(begin));</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
+  <a href="/blog/first/" class="image featured">
     
+      <img src="/images/noa.png" alt="">
     
-    
+  </a>
 
-    
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+        </section>
+        <header>
+          <h1><a href="/blog/first/">初めての投稿</a></h1>
+          <time class="published" datetime="">December 8, 2019</time>
+        </header>
+      </article>
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
+    </section>
   
-  
-  
-  </article>
 
-
+  
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2018/04/01/RUPC2018-参加記/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mkan_0141">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mkan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/01/RUPC2018-参加記/" itemprop="url">RUPC2018 参加記</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-01T23:14:30+09:00">
-                2018-04-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
           
             
           
-
           
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="RUPC参加前"><a href="#RUPC参加前" class="headerlink" title="RUPC参加前"></a>RUPC参加前</h1><p>twitterで今年もあるよとのことだったので参戦。<br>[<a href="https://atnd.org/events/94033:embed:cite" target="_blank" rel="external">https://atnd.org/events/94033:embed:cite</a>]</p>
-<h1 id="1日目-立命館大学セット"><a href="#1日目-立命館大学セット" class="headerlink" title="1日目-立命館大学セット"></a>1日目-立命館大学セット</h1><p>怒髪さん、masumiさん、ksawさんの4人でdmkmというチームで参加しました。<br>自分はC問題を担当していましたが、解法が舞い降りてこなかったのですぐ助けてした。弱いね。<br>結局解法を教えてもらったが実装できそうになかったので怒髪さんに投げた。<br>E問題はksawさんが6通り辺をはってダイクストラやるだけ、と解法を教えてくれたので実装するもWA。<br>初期化の値が小さかったみたい。見事な戦犯をかます。<br>自分の仕事は以上で、チームとしては全完を成し遂げた。<br>チームメンバープロすぎる。</p>
-<h1 id="1日目-懇親会"><a href="#1日目-懇親会" class="headerlink" title="1日目-懇親会"></a>1日目-懇親会</h1><p>twitterでよく見かける人々と喋ったりした。<br>去年のようにキャベツが大量に残っていたわけじゃなく平和だった。<br>[<a href="https://twitter.com/mkan_0141/status/978227367578497024:embed#みかんは完食されていました嬉しいみかんー" target="_blank" rel="external">https://twitter.com/mkan_0141/status/978227367578497024:embed#みかんは完食されていました嬉しいみかんー</a> &gt;&lt; <a href="https://t.co/JMkAb93PH7" target="_blank" rel="external">https://t.co/JMkAb93PH7</a>]</p>
-<h1 id="2日目-会津大学セット"><a href="#2日目-会津大学セット" class="headerlink" title="2日目-会津大学セット"></a>2日目-会津大学セット</h1><p>2日目はtuki_remonさんとkeiさんでkankitukeiというチームで参加した。<br>由来はレモンとみかんで柑橘、keiさんなので系、で柑橘系（ 個人的にめっちゃ好きなチーム名 )  </p>
-<p>自分はB問題を解いて、あとはFとG問題の考察をした。</p>
-<p>Fは移動パターンが数通りしかないから筋肉で殴れそう。<br>実装バグらせそうだったのでtuki_remonさんに実装を任せる。</p>
-<p>Gは1つのペアで条件が成り立つなら優先的に消していき、それ以外のもので一般マッチングすればいいのでは？みたいな気持ちになった。<br>一般マッチングをどう実装すればいいのかわからなかったのでkeiさんに実装を任せる。<br>二人ともAC。はいプロ。</p>
-<p>考察を他人に教えるということに慣れてなかったので、つたない日本語で考察を二人に言って申し訳なかった…。</p>
-<p>この日は6完で、個人的にRUPC史上最も活躍した日だと思ってます。(ほんまか)</p>
-<p>[<a href="https://twitter.com/mkan_0141/status/978545434846089216:embed#I問題作問者にI問題のタイトルを叫びながらりんご潰して欲しい" target="_blank" rel="external">https://twitter.com/mkan_0141/status/978545434846089216:embed#I問題作問者にI問題のタイトルを叫びながらりんご潰して欲しい</a>]</p>
-<h1 id="2日目-懇親会"><a href="#2日目-懇親会" class="headerlink" title="2日目-懇親会"></a>2日目-懇親会</h1><p>初めて酎ハイをジョッキ2杯飲んだけど全く酔った感じがしなかった</p>
-<p>[<a href="https://twitter.com/mkan_0141/status/978593338721943553:embed#お前らレモン残すんじゃねえぞみかんとの約束だからな！" target="_blank" rel="external">https://twitter.com/mkan_0141/status/978593338721943553:embed#お前らレモン残すんじゃねえぞみかんとの約束だからな！</a> #rupc2018 <a href="https://t.co/rwfnUpRgvI" target="_blank" rel="external">https://t.co/rwfnUpRgvI</a>]</p>
-<p>[<a href="https://twitter.com/mkan_0141/status/978594531858776064:embed#レモン完食🍋🍋🍋🍋" target="_blank" rel="external">https://twitter.com/mkan_0141/status/978594531858776064:embed#レモン完食🍋🍋🍋🍋</a> #rupc2018 <a href="https://t.co/xLQaMGIfnm" target="_blank" rel="external">https://t.co/xLQaMGIfnm</a>]</p>
-<p>どっからどう見ても酔ってますね。はい。</p>
-<h1 id="3日目-北海道大学セット"><a href="#3日目-北海道大学セット" class="headerlink" title="3日目-北海道大学セット"></a>3日目-北海道大学セット</h1><p>3日目はjimmyさんとわたあめさんとでjwmというチームで参加。</p>
-<p>A問題は、はいという感じだったので実装AC<br>B問題はいつのまにかACされていた。</p>
-<p>C問題はわたあめさんから解法を聞くも実装方法がピンと思いつかず、ひどいソースコードになってしまった。その上ガバガバ実装だったので助けてもらいながらコードを修正する。これでいけるだろうということで提出するもWA。コンテスト中にはACできず。</p>
-<p>D問題はラスト１分を切っている状態でjimmyさんが通してた。プロ。</p>
-<p>結局この日は3完。知識不足というか実装力のなさを痛感した。</p>
-<p>終わってから番兵さんとTreeoneさんにC問題のコーナーケースを聞いて辛い気持ちになった。  </p>
-<p>[<a href="https://twitter.com/mkan_0141/status/978850667203788805:embed#C問題ゆるせん" target="_blank" rel="external">https://twitter.com/mkan_0141/status/978850667203788805:embed#C問題ゆるせん</a>]</p>
-<h1 id="その後"><a href="#その後" class="headerlink" title="その後"></a>その後</h1><p>RUPC参加者とにぼ二郎食べに行くぞー！！と思ったら定休日だったらしく別のラーメン屋に行った。<br>[<a href="https://twitter.com/mkan_0141/status/978884405459595265:embed#RUPC参加者とラ" target="_blank" rel="external">https://twitter.com/mkan_0141/status/978884405459595265:embed#RUPC参加者とラ</a> <a href="https://t.co/GfQGIY5MPR" target="_blank" rel="external">https://t.co/GfQGIY5MPR</a>]</p>
-<h1 id="最後に"><a href="#最後に" class="headerlink" title="最後に"></a>最後に</h1><p>チームを組んで競プロするのはやっぱり楽しかったし、自分よりはるかにできる人の考察を聞いたりするのはすごくタメになる。<br>それに競プロのモチベーションも高まったので参加してよかったと思う。</p>
-<p>次に参加するときには青くなっていたいなぁ</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2018/03/02/webpackで「Module-not-found-Error-Can-t-resolve-fs-」と出てきた時の対処法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mkan_0141">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mkan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/02/webpackで「Module-not-found-Error-Can-t-resolve-fs-」と出てきた時の対処法/" itemprop="url">webpackで「Module not found: Error: Can't resolve 'fs'」と出てきた時の対処法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <li>
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-02T13:32:47+09:00">
-                2018-03-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
+              Uncategorized<span class="count">1</span>
             
           
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="エラーいっぱいでつらい"><a href="#エラーいっぱいでつらい" class="headerlink" title="エラーいっぱいでつらい"></a>エラーいっぱいでつらい</h1><p>reactを使っていた時に踏んだエラーで、<figure class="highlight plain"><figcaption><span>webpack```したら大量のエラーが出てきて、その大半がModule not found: Error: Can't resolve 'fs' ( ここの'fs' が 'net' とか 'tls' と表示されていたのもあった)。</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">とりあえず、</div><div class="line">```yarn add fs</div></pre></td></tr></table></figure></p>
-<p>でnot foundなモジュールをインストールしたり、エラーが出ているモジュールを別のバージョンでインストールしたり試行錯誤してもダメだった。<br>ググってみたりしたけど、ググり力が低いため見つけるのに時間がかかった。</p>
-<h1 id="対処法"><a href="#対処法" class="headerlink" title="対処法"></a>対処法</h1><p>webpack.config.jsonに「target: ‘node’」を追加すればいい。<br>たったこれだけでした。</p>
-<p>詳しくはこのサイトに書いてます。<br>[<a href="https://jlongster.com/Backend-Apps-with-Webpack--Part-I" target="_blank" rel="external">https://jlongster.com/Backend-Apps-with-Webpack--Part-I</a>]</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2018/02/18/ABC088/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mkan_0141">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mkan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/18/ABC088/" itemprop="url">ABC088</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-18T01:05:30+09:00">
-                2018-02-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>タイポとか色々やらかして辛いコンテストでした</p>
-<h1 id="A-Infinite-Coins"><a href="#A-Infinite-Coins" class="headerlink" title="A - Infinite Coins"></a>A - Infinite Coins</h1><p><a href="https://beta.atcoder.jp/contests/abc088/tasks/abc088_a" target="_blank" rel="external">https://beta.atcoder.jp/contests/abc088/tasks/abc088_a</a></p>
-<p>(N % 500 &lt;= A)が成り立てばYesを出力すればよいよい<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> n, a;</div><div class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; a;</div><div class="line">    n %= <span class="number">500</span>;</div><div class="line">    <span class="keyword">if</span>(n &lt;= a)<span class="built_in">cout</span> &lt;&lt; <span class="string">"Yes"</span> &lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; <span class="string">"No"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="B-Card-Game-for-Two"><a href="#B-Card-Game-for-Two" class="headerlink" title="B - Card Game for Two"></a>B - Card Game for Two</h1><p><a href="https://beta.atcoder.jp/contests/abc088/tasks/abc088_b" target="_blank" rel="external">https://beta.atcoder.jp/contests/abc088/tasks/abc088_b</a></p>
-<p>両者とも最大になるようにカードを取っていくのだから当然数字が大きいカードから取っていくのでそれをシュミレーションする。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">    <span class="keyword">int</span> a[<span class="number">105</span>];</div><div class="line">    <span class="built_in">cin</span> &gt;&gt; n;</div><div class="line">    <span class="keyword">int</span> aa = <span class="number">0</span>, b = <span class="number">0</span>;</div><div class="line">    rep(i, n)<span class="built_in">cin</span> &gt;&gt; a[i];</div><div class="line">    sort(a, a + n, greater&lt;<span class="keyword">int</span>&gt;());</div><div class="line">    rep(i, n)&#123;</div><div class="line">        <span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span>)aa += a[i];</div><div class="line">        <span class="keyword">else</span> b += a[i];</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">abs</span>(aa - b) &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="C-Takahashi’s-Information"><a href="#C-Takahashi’s-Information" class="headerlink" title="C - Takahashi’s Information"></a>C - Takahashi’s Information</h1><p><a href="https://beta.atcoder.jp/contests/abc088/tasks/abc088_c" target="_blank" rel="external">https://beta.atcoder.jp/contests/abc088/tasks/abc088_c</a></p>
-<p>a1, a2, a3の値が決まったとすると、b1, b2, b3がどんな値を取っても a1 と a2 を使ったマスの差はどの行を見ても同じで、同じく a2 と a3 を使ったマスの差もどの行を見ても同じである規則性(?)がある。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> c[<span class="number">4</span>][<span class="number">4</span>];</div><div class="line">    rep(i, <span class="number">3</span>)&#123;</div><div class="line">        rep(j, <span class="number">3</span>)&#123;</div><div class="line">            <span class="built_in">cin</span> &gt;&gt; c[i][j];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span>(c[<span class="number">0</span>][<span class="number">0</span>] - c[<span class="number">0</span>][<span class="number">1</span>] == c[<span class="number">1</span>][<span class="number">0</span>] - c[<span class="number">1</span>][<span class="number">1</span>] &amp;&amp; c[<span class="number">1</span>][<span class="number">0</span>] - c[<span class="number">1</span>][<span class="number">1</span>] == c[<span class="number">2</span>][<span class="number">0</span>] - c[<span class="number">2</span>][<span class="number">1</span>] &amp;&amp;</div><div class="line">       c[<span class="number">0</span>][<span class="number">1</span>] - c[<span class="number">0</span>][<span class="number">2</span>] == c[<span class="number">1</span>][<span class="number">1</span>] - c[<span class="number">1</span>][<span class="number">2</span>] &amp;&amp; c[<span class="number">1</span>][<span class="number">1</span>] - c[<span class="number">1</span>][<span class="number">2</span>] == c[<span class="number">2</span>][<span class="number">1</span>] - c[<span class="number">2</span>][<span class="number">2</span>])&#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Yes"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"No"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>if文が長くなってすっごい見づらいな…</p>
-<h1 id="D-Grid-Repainting"><a href="#D-Grid-Repainting" class="headerlink" title="D - Grid Repainting"></a>D - Grid Repainting</h1><p><a href="https://beta.atcoder.jp/contests/abc088/tasks/abc088_d" target="_blank" rel="external">https://beta.atcoder.jp/contests/abc088/tasks/abc088_d</a></p>
-<p>自分の大好きなアルゴリズムはBFSなのででてきたときは興奮した:dohentai:<br>や、BFSって真面目にコツコツとする感じが可愛いでしょ？可愛いですね。</p>
-<p>BFSでスタートからゴールまでの最短距離を計算して、(‘ . ‘の数 - 最短距離 - 1)が最大スコアになる。<br>最後の -1 はゴールの部分は’ . ‘にしておく必要があるからです。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> h, w;</div><div class="line"><span class="keyword">int</span> d[<span class="number">55</span>][<span class="number">55</span>];</div><div class="line"><span class="keyword">char</span> s[<span class="number">55</span>][<span class="number">55</span>];</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">BFS</span><span class="params">()</span></span>&#123;</div><div class="line">    rep(i, <span class="number">55</span>)rep(j, <span class="number">55</span>)d[i][j] = INF;</div><div class="line">    d[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</div><div class="line">    <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</div><div class="line">    q.push(<span class="number">0</span>);q.push(<span class="number">0</span>);</div><div class="line">    <span class="keyword">while</span>(q.size())&#123;</div><div class="line">        <span class="keyword">int</span> x = q.front(); q.pop();</div><div class="line">        <span class="keyword">int</span> y = q.front(); q.pop();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>; i++)&#123;</div><div class="line">            <span class="keyword">int</span> xx = x + dx[i];</div><div class="line">            <span class="keyword">int</span> yy = y + dy[i];</div><div class="line">            <span class="keyword">if</span>(<span class="number">0</span> &lt;= xx &amp;&amp; xx &lt;= w &amp;&amp; <span class="number">0</span> &lt;= yy &amp;&amp; yy &lt;= h &amp;&amp; s[yy][xx] == <span class="string">'.'</span>)&#123;</div><div class="line">                s[yy][xx] = <span class="string">'#'</span>;</div><div class="line">                d[yy][xx] = min(d[yy][xx], d[y][x] + <span class="number">1</span>);</div><div class="line">                q.push(xx);q.push(yy);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> cnt = <span class="number">0</span>;</div><div class="line">    <span class="built_in">cin</span> &gt;&gt; h &gt;&gt; w;</div><div class="line">    rep(i, h)rep(j, w)&#123;</div><div class="line">        <span class="built_in">cin</span> &gt;&gt; s[i][j];</div><div class="line">        <span class="keyword">if</span>(s[i][j] == <span class="string">'.'</span>)cnt++;</div><div class="line">    &#125;</div><div class="line">    h--; w--;</div><div class="line">    BFS();</div><div class="line">    <span class="keyword">if</span>(d[h][w] == INF)<span class="built_in">cout</span> &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; max(<span class="number">0</span>, cnt - d[h][w] - <span class="number">1</span>)&lt;&lt; <span class="built_in">endl</span>; </div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2017/09/17/ABC074-AtCoder-Beginner-Contest/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mkan_0141">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mkan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/17/ABC074-AtCoder-Beginner-Contest/" itemprop="url">ABC074(AtCoder Beginner Contest)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-17T01:26:14+09:00">
-                2017-09-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="A問題"><a href="#A問題" class="headerlink" title="A問題"></a>A問題</h2><p>N x N のマス目があり、そのマスを白色か黒色で塗りつぶす。<br>A個のマス目を白色で塗りつぶすとき、黒色のマスは何個あるでしょうかという問題。</p>
-<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>はい。やるだけ。 ( N * N - A )</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">  <span class="keyword">int</span> n,a;</div><div class="line">  <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;a;</div><div class="line">  <span class="built_in">cout</span>&lt;&lt;n*n-a&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="B問題"><a href="#B問題" class="headerlink" title="B問題"></a>B問題</h2><p>コンテスト中、なぜかこの問題の内容を理解するのに時間がかかった…</p>
-<p>xy平面にN個のボールをこのボールがある。<br>このうちi番目のボールは位置(x, i)にある。(xは入力で与えられる)<br>すぬけ君はこれらのボールを回収するために2つのロボット、ロボットAとロボットBをそれぞれN個ずつ作った。<br>ロボットAは位置(0, a)で起動されy = a上にあるボールを拾って位置(0, a)に戻ってくる。<br>ロボットBは位置(K, a)で起動されy = a上にあるボールを拾って位置(K, a)に戻ってくる。(Kは入力で与えられる)<br>このロボットを使って全てのボールを回収するとき、ロボットの移動距離の総和として考えられる値のうち最小のものを答えろという問題。</p>
-<h2 id="解法-1"><a href="#解法-1" class="headerlink" title="解法"></a>解法</h2><p>各ボールを回収する最短距離はロボットAを使った時の距離(a <em> 2)か、ロボットBを使った時の距離((K - (ボールのあるx座標)) </em> 2)のどちらかなので小さい方を選択していけば良い。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">  <span class="keyword">int</span> n,k;</div><div class="line">  <span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">  <span class="keyword">int</span> x;</div><div class="line">  <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;k;</div><div class="line">  rep(i,n)&#123;</div><div class="line">    <span class="built_in">cin</span>&gt;&gt;x;</div><div class="line">    ans+=min(x*<span class="number">2</span>,(k-x)*<span class="number">2</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2017/09/15/Hexo-change-font/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mkan_0141">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mkan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/15/Hexo-change-font/" itemprop="url">hexoのデフォルトのフォントを変える方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-15T15:29:19+09:00">
-                2017-09-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>使っているテーマのディレクトリ内のsource/css/_variables/base.styl<br>で変更することができる。(筆者のthemeはNextで他のthemeを使っている場合ファイルが違うかもしれないがCSSディレクトリ内のファイルをいじればなんとかなるはず)</p>
-<p>変更してデプロイする前に、<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div></pre></td></tr></table></figure></p>
-<p>をしてからデプロイすればブログのフォントが変更されます。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2017/09/11/ArgumentOutOfRangeException/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mkan_0141">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mkan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/11/ArgumentOutOfRangeException/" itemprop="url">UnityでArgumentOutOfRangeException: "Cannot be negative.Parameter name: length"っていうbuildエラーが出て困った話</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-11T17:09:24+09:00">
-                2017-09-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>自分はUnity初心者なので100%正しい情報を伝えられているかわかりません。ご了承の上お読みください。</p>
-<h2 id="本編"><a href="#本編" class="headerlink" title="本編"></a>本編</h2><p>UnityでIOS向けにbuildしたらConsoleに</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Cannot be negative.</div><div class="line">Parameter name: length</div></pre></td></tr></table></figure>
-<p>とエラー出てきてbuildに失敗しまくり、2時間くらいこのエラーにはまりました…。</p>
-<p>この時、実はエラーではなく警告に<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Exception: Error building Player: Exception: iPhoneBundleIdentifier has not been set up.</div></pre></td></tr></table></figure></p>
-<p>というのが表示されていました。<br>この警告は「bundle ID おかしくないですか？」という意味らしい(海外のサイト調べ)です。<br>この警告を取り除いたらなぜか”Cannot be negative.Parameter name: length”のエラーが消えました。</p>
-<h2 id="Bundle-ID"><a href="#Bundle-ID" class="headerlink" title="Bundle ID"></a>Bundle ID</h2><p>Bundle IDは[company nameの逆].[アプリ名]にしなければいけないみたいです。</p>
-<p>例<br>company name -&gt; mkan.home.company<br>アプリ名 -&gt; LikeOrange<br>と設定していれば<br>Bundle ID -&gt; company.home.mkan.LikeOrange<br>と設定しなければならないみたいです。</p>
-<p>bundle id の変更方法は簡単です。</p>
-<ol>
-<li>build settings -&gt; player settingsを押す。</li>
-<li>Others settingsのBundle Identifier の所の文字を変える</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2017/09/10/ABC073 (AtCoder Beginner Contest)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mkan_0141">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mkan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/10/ABC073 (AtCoder Beginner Contest)/" itemprop="url">ABC073 (AtCoder Beginner Contest)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-10T01:11:16+09:00">
-                2017-09-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <a id="more"></a>
-<h2 id="A問題"><a href="#A問題" class="headerlink" title="A問題"></a>A問題</h2><p>整数が与えられ、その数字に「9」が含まれているか調べる問題。</p>
-<h1 id="解き方"><a href="#解き方" class="headerlink" title="解き方"></a>解き方</h1><p>私は、与えられる整数を文字列として扱い、その文字列に’9’が含まれているかで判断した。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">  <span class="built_in">string</span> s;</div><div class="line">  <span class="built_in">cin</span>&gt;&gt;s;</div><div class="line">  <span class="keyword">if</span>(s.find(<span class="string">"9"</span>)!=<span class="number">-1</span>)<span class="built_in">cout</span>&lt;&lt;<span class="string">"Yes"</span>&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">  <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;<span class="string">"No"</span>&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>s.find()の返り値は、文字列が見つかればその文字列が何番目にあるかを返し、もし存在しなければ-1を返します。</p>
-<h2 id="B問題"><a href="#B問題" class="headerlink" title="B問題"></a>B問題</h2><p>n組の団体が劇場に訪れ、それぞれの団体は座席番号l~r (l &lt;= r) に座る。<br>その劇場に何人の人がいるかという問題。</p>
-<h1 id="解き方-1"><a href="#解き方-1" class="headerlink" title="解き方"></a>解き方</h1><p>複数の人が同じ座席に座るというハプニングは起こらないと仮定されてるので、それぞれの団体が座る人数は(r-l+1)。<br>あとはこれを計算する。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">  <span class="keyword">int</span> n;</div><div class="line">  <span class="keyword">int</span> l,r;</div><div class="line">  <span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line"></div><div class="line">  <span class="built_in">cin</span>&gt;&gt;n;</div><div class="line">  <span class="keyword">for</span>(i,n)&#123;</div><div class="line">    <span class="built_in">cin</span>&gt;&gt;l&gt;&gt;r;</div><div class="line">    ans+=r-l+<span class="number">1</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="C問題"><a href="#C問題" class="headerlink" title="C問題"></a>C問題</h2><p>josinoお姉ちゃんが1つ数字を言うのでそれを白紙の紙に書く。もしjoisinoお姉ちゃんが言った数字がすでに紙に書かれている場合は紙からその数字を消しゴムか何かで消す。これを何回か繰り返し、結果、数字が書かれた紙が何枚残るか数える問題。</p>
-<h1 id="解き方-2"><a href="#解き方-2" class="headerlink" title="解き方"></a>解き方</h1><p>mapを使い出てきた数字をカウントする。<br>呼ばれた回数が(1回目-&gt;書く　2回目-&gt;消す　3回目-&gt;書く　4回目-&gt;消す …)と奇数回呼ばれた時数字が紙に書かれていることがわかる。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">  <span class="keyword">int</span> n;</div><div class="line">  ll x;</div><div class="line">  <span class="built_in">map</span>&lt;ll,<span class="keyword">int</span>&gt; m;</div><div class="line">  <span class="built_in">cin</span>&gt;&gt;n;</div><div class="line">  rep(i,n)&#123;</div><div class="line">    <span class="built_in">cin</span>&gt;&gt;x;</div><div class="line">    m[x]++;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line"></div><div class="line">  <span class="keyword">for</span>(<span class="keyword">auto</span> itr = m.begin(); itr != m.end(); ++itr) &#123;</div><div class="line">    <span class="keyword">if</span>(itr-&gt;second%<span class="number">2</span>==<span class="number">1</span>)ans++;</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div></pre></td></tr></table></figure>
-<p>for(auto itr = m.begin(); itr != m.end(); ++itr) はmapに格納された要素を一つづつ呼び出す処理をしている。(foreach的な感じ)<br>itr-&gt;firstはキー、itr-&gt;secondは値を表す。<br>今回必要な情報は何回数字が呼ばれたかの「値」が必要だったのでitr-&gt;secondのみを使っている。</p>
-<h2 id="D問題"><a href="#D問題" class="headerlink" title="D問題"></a>D問題</h2><p>この国にはN個の町があり、joisinoお姉ちゃんはこの国のR個の町を訪れなければならない。<br>その最短距離を求める問題。(循環セールス問題みたいな感じ)</p>
-<h1 id="解き方-3"><a href="#解き方-3" class="headerlink" title="解き方"></a>解き方</h1><p>N&lt;=200 だったのでワーシャルフロイド法O(N^3)を使って全町間の最短距離を求める。<br>その次に、深さ優先探索を使って全探索する。(Rの制約がR &lt;= 8 と小さいから)<br>計算量はO(N^3+R*R!)でした。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> d[<span class="number">205</span>][<span class="number">205</span>];</div><div class="line">vi R;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</div><div class="line">  rep(i,<span class="number">205</span>)rep(j,<span class="number">205</span>)d[i][j]=INF;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">wf</span><span class="params">()</span></span>&#123;</div><div class="line">  rep(k,<span class="number">205</span>)&#123;</div><div class="line">    rep(i,<span class="number">205</span>)&#123;</div><div class="line">      rep(j,<span class="number">205</span>)&#123;</div><div class="line">	d[i][j]=min(d[i][j],d[i][k]+d[k][j]);</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> now,<span class="keyword">bool</span> used[],<span class="keyword">int</span> cnt,<span class="keyword">int</span> cost)</span></span>&#123;</div><div class="line">  <span class="keyword">int</span> calc=INF;</div><div class="line">  <span class="keyword">if</span>(cnt==R.size())<span class="keyword">return</span> cost;</div><div class="line">  rep(i,R.size())&#123;</div><div class="line">    <span class="keyword">if</span>(d[now][R[i]]!=INF&amp;&amp;used[i]!=<span class="literal">true</span>)&#123;</div><div class="line">      used[i]=<span class="literal">true</span>;</div><div class="line">      calc=min(calc,dfs(R[i],used,cnt+<span class="number">1</span>,cost+d[now][R[i]]));</div><div class="line">      used[i]=<span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> calc;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">  <span class="keyword">int</span> n,m,r;</div><div class="line">  <span class="keyword">int</span> a,b,c;</div><div class="line">  <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m&gt;&gt;r;</div><div class="line">  rep(i,r)&#123;</div><div class="line">    <span class="keyword">int</span> x;</div><div class="line">    <span class="built_in">cin</span>&gt;&gt;x;</div><div class="line">    R.pb(x);</div><div class="line">  &#125;</div><div class="line">  init();</div><div class="line">  rep(i,m)&#123;</div><div class="line">    <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b&gt;&gt;c;</div><div class="line">    d[a][b]=c;</div><div class="line">    d[b][a]=c;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  wf();</div><div class="line">  <span class="keyword">int</span> ans=INF;</div><div class="line">  rep(i,R.size())&#123;</div><div class="line">    <span class="keyword">bool</span> used[R.size()];</div><div class="line">    used[i]=<span class="literal">true</span>;</div><div class="line">    ans=min(ans,dfs(R[i],used,<span class="number">1</span>,<span class="number">0</span>));</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>ワーシャルフロイド方の説明はゆらふなさんの記事がわかりやすかったので貼っておきます。<br><a href="http://pakapa104.hatenablog.com/entry/2016/02/05/225241" target="_blank" rel="external">http://pakapa104.hatenablog.com/entry/2016/02/05/225241</a></p>
-<p>早く水色になりたいなぁー</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2017/09/04/about/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mkan_0141">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mkan's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/04/about/" itemprop="url">about</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">投稿日</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-04T11:13:14+09:00">
-                2017-09-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>初めましてmkanです。読み方はみかんです。<br>このブログでは競技プログラミングや情報系のことを書こうと思ってます。<br>定期的にブログを更新していこうと思っているのでよろしくお願いします.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          
-            <p class="site-author-name" itemprop="name">mkan_0141</p>
-            <p class="site-description motion-element" itemprop="description"></p>
-        </div>
-
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-            
-              <a href="/archives/">
-            
-                <span class="site-state-item-count">9</span>
-                <span class="site-state-item-name">ポスト</span>
-              </a>
-            </div>
-          
-
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">16</span>
-                <span class="site-state-item-name">タグ</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
+          </li>
+        </ul>
       </section>
+    
+  
+
+  <section id="mini-bio">
+    <header>
+      <h1>About</h1>
+    </header>
+    <p>test</p>
+    <footer>
+      <a href="/about" class="button">Learn More</a>
+    </footer>
+  </section>
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+    <li><a href="/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fas fa-rss"></a></li>
+
+
+        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+<li><a href="//flickr.com/photos/example" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+
+
+<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+<li><a href="//facebook.com/example" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/example" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+
+
+
+
+
+
+
+<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/example" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+<li><a href="//pinterest.com/example" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/example" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+<li><a href="//researchgate.net/profile/example" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+<li><a href="//keybase.io/example" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//example.com/@example" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2019
+      
+        Hugo Future Imperfect Slim
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.60.1' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 
-      
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+
 
     </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">mkan_0141</span>
-
-  
-</div>
-
-
-  <div class="powered-by">Powered by <a class="theme-link" href="https://hexo.io">Hexo</a></div>
-
-  <span class="post-meta-divider">|</span>
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</body>
+  </body>
 </html>
