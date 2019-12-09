@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo Future Imperfect Slim em portuguﾃｪs</title>
-    <link>https://example.com/pt/</link>
+    <link>https://mkan0141.github.io/pt/</link>
     <description>Recent content on Hugo Future Imperfect Slim em portuguﾃｪs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt</language>
     
-	<atom:link href="https://example.com/pt/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mkan0141.github.io/pt/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
