@@ -1,8 +1,11 @@
+language: go
+dist: trusty
+
 branches:
   only:
   - master
 
-  script:
+script:
   - echo "Skipping tests"
 
 deploy:
