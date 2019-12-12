@@ -1,9 +1,9 @@
-language: go
-dist: trusty
-
 branches:
   only:
   - master
+
+  script:
+  - echo "Skipping tests"
 
 deploy:
   provider: pages
