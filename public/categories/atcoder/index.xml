@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AtCoder on mkan0141&#39;s blog</title>
+    <link>https://mkan0141.dev/categories/atcoder/</link>
+    <description>Recent content in AtCoder on mkan0141&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 18 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mkan0141.dev/categories/atcoder/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ABC088</title>
+      <link>https://mkan0141.dev/blog/atcoder-abc088/</link>
+      <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkan0141.dev/blog/atcoder-abc088/</guid>
+      <description>タイポとか色々やらかして辛いコンテストでした
+A - Infinite Coins https://beta.atcoder.jp/contests/abc088/tasks/abc088_a
+(N % 500 &amp;lt;= A)が成り立てばYesを出力すればよいよい
+int main(){ int n, a; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; a; n %= 500; if(n &amp;lt;= a)cout &amp;lt;&amp;lt; &amp;#34;Yes&amp;#34; &amp;lt;&amp;lt;endl; else cout &amp;lt;&amp;lt; &amp;#34;No&amp;#34; &amp;lt;&amp;lt; endl; return 0; } B - Card Game for Two https://beta.atcoder.jp/contests/abc088/tasks/abc088_b
+両者とも最大になるようにカードを取っていくのだから当然数字が大きいカードから取っていくのでそれをシュミレーションする。
+int main(){ int n; int a[105]; cin &amp;gt;&amp;gt; n; int aa = 0, b = 0; rep(i, n)cin &amp;gt;&amp;gt; a[i]; sort(a, a + n, greater&amp;lt;int&amp;gt;()); rep(i, n){ if(i % 2 == 0)aa += a[i]; else b += a[i]; } cout &amp;lt;&amp;lt; abs(aa - b) &amp;lt;&amp;lt; endl; return 0; } C - Takahashi&#39;s Information https://beta.</description>
+    </item>
+    
+    <item>
+      <title>ABC073</title>
+      <link>https://mkan0141.dev/blog/atcoder-abc073/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkan0141.dev/blog/atcoder-abc073/</guid>
+      <description>A問題 整数が与えられ、その数字に「9」が含まれているか調べる問題。
+解き方 私は、与えられる整数を文字列として扱い、その文字列に&#39;9&#39;が含まれているかで判断した。
+int main(){ string s; cin&amp;gt;&amp;gt;s; if(s.find(&amp;#34;9&amp;#34;)!=-1)cout&amp;lt;&amp;lt;&amp;#34;Yes&amp;#34;&amp;lt;&amp;lt;endl; else cout&amp;lt;&amp;lt;&amp;#34;No&amp;#34;&amp;lt;&amp;lt;endl; return 0; } s.find()の返り値は、文字列が見つかればその文字列が何番目にあるかを返し、もし存在しなければ-1を返します。
+B問題 n組の団体が劇場に訪れ、それぞれの団体は座席番号l~r (l &amp;lt;= r) に座る。 その劇場に何人の人がいるかという問題。
+解き方 複数の人が同じ座席に座るというハプニングは起こらないと仮定されてるので、それぞれの団体が座る人数は(r-l+1)。 あとはこれを計算する。
+int main(){ int n; int l,r; int ans=0; cin&amp;gt;&amp;gt;n; for(i,n){ cin&amp;gt;&amp;gt;l&amp;gt;&amp;gt;r; ans+=r-l+1; } cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl; return 0; } C問題 josinoお姉ちゃんが1つ数字を言うのでそれを白紙の紙に書く。もしjoisinoお姉ちゃんが言った数字がすでに紙に書かれている場合は紙からその数字を消しゴムか何かで消す。これを何回か繰り返し、結果、数字が書かれた紙が何枚残るか数える問題。
+解き方 mapを使い出てきた数字をカウントする。 呼ばれた回数が(1回目-&amp;gt;書く　2回目-&amp;gt;消す　3回目-&amp;gt;書く　4回目-&amp;gt;消す &amp;hellip;)と奇数回呼ばれた時数字が紙に書かれていることがわかる。
+int main(){ int n; ll x; map&amp;lt;ll,int&amp;gt; m; cin&amp;gt;&amp;gt;n; rep(i,n){ cin&amp;gt;&amp;gt;x; m[x]++; } int ans=0; for(auto itr = m.</description>
+    </item>
+    
+    <item>
+      <title>ABC074</title>
+      <link>https://mkan0141.dev/blog/atcoder-abc074/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkan0141.dev/blog/atcoder-abc074/</guid>
+      <description>A問題 N x N のマス目があり、そのマスを白色か黒色で塗りつぶす。 A個のマス目を白色で塗りつぶすとき、黒色のマスは何個あるでしょうかという問題。
+解法 はい。やるだけ。 ( N * N - A )
+int main(){ int n,a; cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;a; cout&amp;lt;&amp;lt;n*n-a&amp;lt;&amp;lt;endl; return 0; } B問題 コンテスト中、なぜかこの問題の内容を理解するのに時間がかかった&amp;hellip;
+xy平面にN個のボールをこのボールがある。 このうちi番目のボールは位置(x, i)にある。(xは入力で与えられる) すぬけ君はこれらのボールを回収するために2つのロボット、ロボットAとロボットBをそれぞれN個ずつ作った。 ロボットAは位置(0, a)で起動されy = a上にあるボールを拾って位置(0, a)に戻ってくる。 ロボットBは位置(K, a)で起動されy = a上にあるボールを拾って位置(K, a)に戻ってくる。(Kは入力で与えられる) このロボットを使って全てのボールを回収するとき、ロボットの移動距離の総和として考えられる値のうち最小のものを答えろという問題。
+解法 各ボールを回収する最短距離はロボットAを使った時の距離(a * 2)か、ロボットBを使った時の距離((K - (ボールのあるx座標)) * 2)のどちらかなので小さい方を選択していけば良い。
+int main(){ int n,k; int ans=0; int x; cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;k; rep(i,n){ cin&amp;gt;&amp;gt;x; ans+=min(x*2,(k-x)*2); } cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl; return 0; } </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,27 +2,155 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on mkan0141&#39;s blog</title>
-    <link>https://mkan0141.github.io/blog/</link>
+    <link>https://mkan0141.dev/blog/</link>
     <description>Recent content in Blog on mkan0141&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Dec 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mkan0141.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mkan0141.dev/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Hugoにコメント機能を追加する</title>
+      <link>https://mkan0141.dev/blog/disqus/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkan0141.dev/blog/disqus/</guid>
+      <description>はじめに アカウント作成 まずは Disqusでアカウントを作ります。</description>
+    </item>
+    
+    <item>
       <title>初めての投稿</title>
-      <link>https://mkan0141.github.io/blog/first/</link>
+      <link>https://mkan0141.dev/blog/first/</link>
       <pubDate>Sun, 08 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mkan0141.github.io/blog/first/</guid>
+      <guid>https://mkan0141.dev/blog/first/</guid>
       <description>初めての投稿 初めまして。みかんです。
 以前まではHexo + GitHub Pagesでブログを書いていたんですが、Hexoで使っていた自分用にカスタマイズしたテーマをうっかり消してしまいた&amp;hellip;。というわけで、この機会にHexoからHugoに変えてみました。
 現在はHUGO FUTURE IMPERFECT SLIMというテーマを使っています。なんかシンプルでいい感じですね。
 これを気に色々記事を書くようにしたいです。
 書くことがないので乃亜ちゃんの可愛い画像を貼ります。
 じゃあの</description>
+    </item>
+    
+    <item>
+      <title>研究室の環境を変えた話</title>
+      <link>https://mkan0141.dev/blog/lab-infrastructure/</link>
+      <pubDate>Fri, 06 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkan0141.dev/blog/lab-infrastructure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AOJ 1619 弁当作り (Making Lunch Boxes)</title>
+      <link>https://mkan0141.dev/blog/aoj-1619-makinglunchboxes/</link>
+      <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkan0141.dev/blog/aoj-1619-makinglunchboxes/</guid>
+      <description>問題 Making Lunch Boxes
+解法 制約に N * M &amp;lt;= 500と書いていて，NとMはどちらかが必ず22以下になるが分かる． これに気がつけば，N &amp;lt;= 22の時はレシピを使うか使わないかの全探索， M &amp;lt;= 22の時は材料を使うか使わないかのbitDPをすれば良い． bitDPの漸化式は dp[][] = max(dp[][], dp[][])
+ソースコード typedef long long ll; bool b[505][505]; ll lists[505]; /* ---- bitDP part ----*/ void init_bitDP(int n,int m){ /* create bit list */ for(int i=0;i&amp;lt;n;i++){ lists[i]=0; for(int j=0;j&amp;lt;m;j++){ if(b[i][j])lists[i]|=(1&amp;lt;&amp;lt;j); } } } int bitDP(int n,int m){ vector&amp;lt;vector&amp;lt;int&amp;gt; &amp;gt;dp(n+1,vector&amp;lt;int&amp;gt;((1&amp;lt;&amp;lt;m),-1)); for(int i=0;i&amp;lt;n;i++){ for(int j=0;j&amp;lt;(1&amp;lt;&amp;lt;m);j++){ dp[i][j]=-INF; } } dp[0][0]=0; for(int i=1;i&amp;lt;=n;i++){ for(int j=0;j&amp;lt;(1&amp;lt;&amp;lt;m);j++){ dp[i][j]=max(dp[i-1][j],dp[i-1][j^lists[i-1]]+1); } } return dp[n][0]; } /* ---- dfs part ---- */ void init_dfs(bool used[]){ for(int i=0;i&amp;lt;505;i++){ used[i]=false; } } int dfs_calc(int n,int m,bool used[]){ int ret=0; for(int i=0;i&amp;lt;n;i++)ret+=used[i]; for(int i=0;i&amp;lt;m;i++){ int sum=0; for(int j=0;j&amp;lt;n;j++){ if(used[j])sum+=b[j][i]; } if(sum%2)return -1; } return ret; } int dfs(int n,int m,int cnt,bool used[]){ int ret=0; if(n==cnt){ return dfs_calc(n,m,used); } used[cnt]=true; ret=max(ret,dfs(n,m,cnt+1,used)); used[cnt]=false; ret=max(ret,dfs(n,m,cnt+1,used)); return ret; } /* ---- main ---- */ void solve(int n,int m){ char c; for(int i=0;i&amp;lt;n;i++){ for(int j=0;j&amp;lt;m;j++){ cin&amp;gt;&amp;gt;c; b[i][j]=c-&amp;#39;0&amp;#39;; } } if(n&amp;lt;=m){ bool used[505]; init_dfs(used); cout&amp;lt;&amp;lt;dfs(n,m,0,used)&amp;lt;&amp;lt;endl; }else{ init_bitDP(n,m); cout&amp;lt;&amp;lt;bitDP(n,m)&amp;lt;&amp;lt;endl;; } } int main(){ int n,m; while(scanf(&amp;#34;%d%d&amp;#34;,&amp;amp;n,&amp;amp;m),n|m){ solve(n,m); } return 0; } </description>
+    </item>
+    
+    <item>
+      <title>AOJ2613 Unordered Operators</title>
+      <link>https://mkan0141.dev/blog/aoj-2613-unorderedoperators/</link>
+      <pubDate>Thu, 20 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkan0141.dev/blog/aoj-2613-unorderedoperators/</guid>
+      <description>※構文解析パートは構文解析Howtoを見て書いています．
+問題 &amp;lsquo;+&amp;rsquo; , &amp;lsquo;-&#39;, &amp;lsquo;*&amp;lsquo;の3つの演算子を使った式が与えられる． それぞれの演算子の優先順位を変えて得られる値の最大値を求めろ．
+解法(もとい実装方法) notさんの解法記事にも書かれているが，優先順位が全て同じ時は以下のコードになる．
+int expression(State &amp;amp;begin) { int ret = term(begin); while (1) { if (*begin == &amp;#39;+&amp;#39;) { begin++; ret += term(begin); } else if (*begin == &amp;#39;-&amp;#39;) { begin++; ret -= term(begin); } else if (*begin == &amp;#39;*&amp;#39;) { begin++; ret *= term(begin); } else { break; } } return ret; } このコードを3つ複製して，それぞれに優先順位をつけるような条件式を付け加えれば，優先順位が3つあるコードが出来上がる．
+次に優先順位の実装を考える． 今回は3bitの数字3つ(priority[3])で管理する．3bitの数字は，1bit目が立っていれば&#39;+&amp;rsquo;，2bit目が立っていれば&amp;rsquo;-&#39;，3bit目が立っていれば&amp;rsquo;*&amp;lsquo;を使うことを表し，3つの数字はそれぞれの優先順位を表す．例えば以下のようになる．
+priority[0] = (001) // 三番目に優先順位が高いのは &amp;#39;+&amp;#39; priority[1] = (100) // 二番目に優先順位が高いのは &amp;#39;*&amp;#39; priority[2] = (010) // 最も優先順位が高いのは &amp;#39;-&amp;#39; 上記のコードにこの優先順位を適応させたコードは以下のようになる．</description>
+    </item>
+    
+    <item>
+      <title>RUPC2018 参加記</title>
+      <link>https://mkan0141.dev/blog/rupc2018/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkan0141.dev/blog/rupc2018/</guid>
+      <description>RUPC参加前 twitterで今年もあるよとのことだったので参戦。 [https://atnd.org/events/94033:embed:cite]
+1日目-立命館大学セット 怒髪さん、masumiさん、ksawさんの4人でdmkmというチームで参加しました。
+自分はC問題を担当していましたが、解法が舞い降りてこなかったのですぐ助けてした。弱いね。
+結局解法を教えてもらったが実装できそうになかったので怒髪さんに投げた。
+E問題はksawさんが6通り辺をはってダイクストラやるだけ、と解法を教えてくれたので実装するもWA。 初期化の値が小さかったみたい。見事な戦犯をかます。
+自分の仕事は以上で、チームとしては全完を成し遂げた。 チームメンバープロすぎる。
+1日目-懇親会 twitterでよく見かける人々と喋ったりした。 去年のようにキャベツが大量に残っていたわけじゃなく平和だった。
+[https://twitter.com/mkan_0141/status/978227367578497024:embed#みかんは完食されていました嬉しいみかんー &amp;gt;&amp;lt; https://t.co/JMkAb93PH7]
+2日目-会津大学セット 2日目はtuki_remonさんとkeiさんでkankitukeiというチームで参加した。
+由来はレモンとみかんで柑橘、keiさんなので系、で柑橘系（ 個人的にめっちゃ好きなチーム名 )
+自分はB問題を解いて、あとはFとG問題の考察をした。
+Fは移動パターンが数通りしかないから筋肉で殴れそう。
+実装バグらせそうだったのでtuki_remonさんに実装を任せる。
+Gは1つのペアで条件が成り立つなら優先的に消していき、それ以外のもので一般マッチングすればいいのでは？みたいな気持ちになった。
+一般マッチングをどう実装すればいいのかわからなかったのでkeiさんに実装を任せる。
+二人ともAC。はいプロ。
+考察を他人に教えるということに慣れてなかったので、つたない日本語で考察を二人に言って申し訳なかった&amp;hellip;。
+この日は6完で、個人的にRUPC史上最も活躍した日だと思ってます。(ほんまか)
+[https://twitter.com/mkan_0141/status/978545434846089216:embed#I問題作問者にI問題のタイトルを叫びながらりんご潰して欲しい]
+2日目-懇親会 初めて酎ハイをジョッキ2杯飲んだけど全く酔った感じがしなかった
+[https://twitter.com/mkan_0141/status/978593338721943553:embed#お前らレモン残すんじゃねえぞみかんとの約束だからな！ #rupc2018 https://t.co/rwfnUpRgvI]
+[https://twitter.com/mkan_0141/status/978594531858776064:embed#レモン完食🍋🍋🍋🍋 #rupc2018 https://t.co/xLQaMGIfnm]
+どっからどう見ても酔ってますね。はい。
+3日目-北海道大学セット 3日目はjimmyさんとわたあめさんとでjwmというチームで参加。
+A問題は、はいという感じだったので実装AC B問題はいつのまにかACされていた。
+C問題はわたあめさんから解法を聞くも実装方法がピンと思いつかず、ひどいソースコードになってしまった。その上ガバガバ実装だったので助けてもらいながらコードを修正する。これでいけるだろうということで提出するもWA。コンテスト中にはACできず。
+D問題はラスト１分を切っている状態でjimmyさんが通してた。プロ。
+結局この日は3完。知識不足というか実装力のなさを痛感した。
+終わってから番兵さんとTreeoneさんにC問題のコーナーケースを聞いて辛い気持ちになった。
+[https://twitter.com/mkan_0141/status/978850667203788805:embed#C問題ゆるせん]
+その後 RUPC参加者とにぼ二郎食べに行くぞー！！と思ったら定休日だったらしく別のラーメン屋に行った。 [https://twitter.com/mkan_0141/status/978884405459595265:embed#RUPC参加者とラ https://t.co/GfQGIY5MPR]
+最後に チームを組んで競プロするのはやっぱり楽しかったし、自分よりはるかにできる人の考察を聞いたりするのはすごくタメになる。 それに競プロのモチベーションも高まったので参加してよかったと思う。
+次に参加するときには青くなっていたいなぁ</description>
+    </item>
+    
+    <item>
+      <title>ABC088</title>
+      <link>https://mkan0141.dev/blog/atcoder-abc088/</link>
+      <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkan0141.dev/blog/atcoder-abc088/</guid>
+      <description>タイポとか色々やらかして辛いコンテストでした
+A - Infinite Coins https://beta.atcoder.jp/contests/abc088/tasks/abc088_a
+(N % 500 &amp;lt;= A)が成り立てばYesを出力すればよいよい
+int main(){ int n, a; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; a; n %= 500; if(n &amp;lt;= a)cout &amp;lt;&amp;lt; &amp;#34;Yes&amp;#34; &amp;lt;&amp;lt;endl; else cout &amp;lt;&amp;lt; &amp;#34;No&amp;#34; &amp;lt;&amp;lt; endl; return 0; } B - Card Game for Two https://beta.atcoder.jp/contests/abc088/tasks/abc088_b
+両者とも最大になるようにカードを取っていくのだから当然数字が大きいカードから取っていくのでそれをシュミレーションする。
+int main(){ int n; int a[105]; cin &amp;gt;&amp;gt; n; int aa = 0, b = 0; rep(i, n)cin &amp;gt;&amp;gt; a[i]; sort(a, a + n, greater&amp;lt;int&amp;gt;()); rep(i, n){ if(i % 2 == 0)aa += a[i]; else b += a[i]; } cout &amp;lt;&amp;lt; abs(aa - b) &amp;lt;&amp;lt; endl; return 0; } C - Takahashi&#39;s Information https://beta.</description>
+    </item>
+    
+    <item>
+      <title>ABC073</title>
+      <link>https://mkan0141.dev/blog/atcoder-abc073/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkan0141.dev/blog/atcoder-abc073/</guid>
+      <description>A問題 整数が与えられ、その数字に「9」が含まれているか調べる問題。
+解き方 私は、与えられる整数を文字列として扱い、その文字列に&#39;9&#39;が含まれているかで判断した。
+int main(){ string s; cin&amp;gt;&amp;gt;s; if(s.find(&amp;#34;9&amp;#34;)!=-1)cout&amp;lt;&amp;lt;&amp;#34;Yes&amp;#34;&amp;lt;&amp;lt;endl; else cout&amp;lt;&amp;lt;&amp;#34;No&amp;#34;&amp;lt;&amp;lt;endl; return 0; } s.find()の返り値は、文字列が見つかればその文字列が何番目にあるかを返し、もし存在しなければ-1を返します。
+B問題 n組の団体が劇場に訪れ、それぞれの団体は座席番号l~r (l &amp;lt;= r) に座る。 その劇場に何人の人がいるかという問題。
+解き方 複数の人が同じ座席に座るというハプニングは起こらないと仮定されてるので、それぞれの団体が座る人数は(r-l+1)。 あとはこれを計算する。
+int main(){ int n; int l,r; int ans=0; cin&amp;gt;&amp;gt;n; for(i,n){ cin&amp;gt;&amp;gt;l&amp;gt;&amp;gt;r; ans+=r-l+1; } cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl; return 0; } C問題 josinoお姉ちゃんが1つ数字を言うのでそれを白紙の紙に書く。もしjoisinoお姉ちゃんが言った数字がすでに紙に書かれている場合は紙からその数字を消しゴムか何かで消す。これを何回か繰り返し、結果、数字が書かれた紙が何枚残るか数える問題。
+解き方 mapを使い出てきた数字をカウントする。 呼ばれた回数が(1回目-&amp;gt;書く　2回目-&amp;gt;消す　3回目-&amp;gt;書く　4回目-&amp;gt;消す &amp;hellip;)と奇数回呼ばれた時数字が紙に書かれていることがわかる。
+int main(){ int n; ll x; map&amp;lt;ll,int&amp;gt; m; cin&amp;gt;&amp;gt;n; rep(i,n){ cin&amp;gt;&amp;gt;x; m[x]++; } int ans=0; for(auto itr = m.</description>
+    </item>
+    
+    <item>
+      <title>ABC074</title>
+      <link>https://mkan0141.dev/blog/atcoder-abc074/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkan0141.dev/blog/atcoder-abc074/</guid>
+      <description>A問題 N x N のマス目があり、そのマスを白色か黒色で塗りつぶす。 A個のマス目を白色で塗りつぶすとき、黒色のマスは何個あるでしょうかという問題。
+解法 はい。やるだけ。 ( N * N - A )
+int main(){ int n,a; cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;a; cout&amp;lt;&amp;lt;n*n-a&amp;lt;&amp;lt;endl; return 0; } B問題 コンテスト中、なぜかこの問題の内容を理解するのに時間がかかった&amp;hellip;
+xy平面にN個のボールをこのボールがある。 このうちi番目のボールは位置(x, i)にある。(xは入力で与えられる) すぬけ君はこれらのボールを回収するために2つのロボット、ロボットAとロボットBをそれぞれN個ずつ作った。 ロボットAは位置(0, a)で起動されy = a上にあるボールを拾って位置(0, a)に戻ってくる。 ロボットBは位置(K, a)で起動されy = a上にあるボールを拾って位置(K, a)に戻ってくる。(Kは入力で与えられる) このロボットを使って全てのボールを回収するとき、ロボットの移動距離の総和として考えられる値のうち最小のものを答えろという問題。
+解法 各ボールを回収する最短距離はロボットAを使った時の距離(a * 2)か、ロボットBを使った時の距離((K - (ボールのあるx座標)) * 2)のどちらかなので小さい方を選択していけば良い。
+int main(){ int n,k; int ans=0; int x; cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;k; rep(i,n){ cin&amp;gt;&amp;gt;x; ans+=min(x*2,(k-x)*2); } cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl; return 0; } </description>
     </item>
     
   </channel>

@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>AtCoder - mkan0141&#39;s blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <meta name="generator" content="Hugo 0.60.1" />
+  <meta itemprop="name" content="AtCoder">
+<meta itemprop="description" content="">
+  <meta property="og:title" content="AtCoder" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mkan0141.dev/categories/atcoder/" />
+<meta property="og:updated_time" content="2018-02-18T00:00:00+00:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="AtCoder"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@mkan_0141"/>
+
+  
+
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/androidstudio.min.css">
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+      
+      <link rel="stylesheet" href="/css/main.min.8071162d8e82975731fda3e21dba72845d8d5de2c7bd0664e11d77e1c5913dfe.css" integrity="sha256-gHEWLY6Cl1cx/aPiHbpyhF2NXeLHvQZk4R134cWRPf4=">
+      <link rel="stylesheet" href="/css/add-on.css">
+    
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-3203171790690571",
+      enable_page_level_ads: true
+    });
+  </script>
+  
+  
+  
+    
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            Categories
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> mkan0141&#39;s blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=AtCoder&amp;url=https%3a%2f%2fmkan0141.dev%2fcategories%2fatcoder%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmkan0141.dev%2fcategories%2fatcoder%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fmkan0141.dev%2fcategories%2fatcoder%2f&amp;title=AtCoder" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fmkan0141.dev%2fcategories%2fatcoder%2f&amp;title=AtCoder" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fmkan0141.dev%2fcategories%2fatcoder%2f&amp;description=AtCoder" target="_blank" rel="noopener" class="share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fmkan0141.dev%2fcategories%2fatcoder%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="/" class="circle" width="" alt="" /></a>
+  <header>
+    <h1>mkan0141's blog</h1>
+  </header>
+  <main>
+    <p>技術的なこととか日記とか</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+    <li><a href="/categories/atcoder/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fas fa-rss"></a></li>
+
+
+        <li><a href="//github.com/mkan0141" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/mkan_0141" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <h1>AtCoder</h1>
+        
+        
+            <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/blog/atcoder-abc088/">ABC088</a></h2>
+    
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2018-02-18 00:00:00 &#43;0000 UTC">
+      February 18, 2018
+    </time>
+    <span class="author">mkan0141</span>
+    
+      <p>2 minutes read</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/blog/atcoder-abc088/" class="image featured">
+    
+      <img src="/" alt="">
+    
+  </a>
+
+
+  
+  <p>タイポとか色々やらかして辛いコンテストでした</p>
+  <footer>
+    <a href="/blog/atcoder-abc088/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://mkan0141.dev/categories/atcoder">AtCoder</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://mkan0141.dev/categories/%E7%AB%B6%E3%83%97%E3%83%AD">競プロ</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    <li class="tags">
+      <ul>
+        <li>None</li>
+      </ul>
+    </li>
+  
+</ul>
+
+  </footer>
+</article>
+
+        
+            <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/blog/atcoder-abc073/">ABC073</a></h2>
+    
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2017-09-17 00:00:00 &#43;0000 UTC">
+      September 17, 2017
+    </time>
+    <span class="author">mkan0141</span>
+    
+      <p>1 minute read</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/blog/atcoder-abc073/" class="image featured">
+    
+      <img src="/" alt="">
+    
+  </a>
+
+
+  
+  <p>整数が与えられ、その数字に「9」が含まれているか調べる問題。</p>
+  <footer>
+    <a href="/blog/atcoder-abc073/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://mkan0141.dev/categories/atcoder">AtCoder</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://mkan0141.dev/categories/%E7%AB%B6%E3%83%97%E3%83%AD">競プロ</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    <li class="tags">
+      <ul>
+        <li>None</li>
+      </ul>
+    </li>
+  
+</ul>
+
+  </footer>
+</article>
+
+        
+            <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/blog/atcoder-abc074/">ABC074</a></h2>
+    
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2017-09-17 00:00:00 &#43;0000 UTC">
+      September 17, 2017
+    </time>
+    <span class="author">mkan0141</span>
+    
+      <p>1 minute read</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/blog/atcoder-abc074/" class="image featured">
+    
+      <img src="/" alt="">
+    
+  </a>
+
+
+  
+  <p>N x N のマス目があり、そのマスを白色か黒色で塗りつぶす。
+A個のマス目を白色で塗りつぶすとき、黒色のマスは何個あるでしょうかという問題。</p>
+  <footer>
+    <a href="/blog/atcoder-abc074/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://mkan0141.dev/categories/atcoder">AtCoder</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://mkan0141.dev/categories/%E7%AB%B6%E3%83%97%E3%83%AD">競プロ</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    <li class="tags">
+      <ul>
+        <li>None</li>
+      </ul>
+    </li>
+  
+</ul>
+
+  </footer>
+</article>
+
+        
+        
+<div class="pagination">
+  
+    <a href="#" class="disabled button big previous"><i class="fas fa-angle-left"></i></a>
+  
+  
+    <a href="#" class="disabled button big next"><i class="fas fa-angle-right"></i></a>
+  
+</div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/first/" class="image featured">
+    
+      <img src="/images/noa.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/first/">初めての投稿</a></h1>
+          <time class="published" datetime="">December 8, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/aoj-1619-makinglunchboxes/" class="image featured">
+    
+      <img src="/" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/aoj-1619-makinglunchboxes/">AOJ 1619 弁当作り (Making Lunch Boxes)</a></h1>
+          <time class="published" datetime="">May 21, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/aoj-2613-unorderedoperators/" class="image featured">
+    
+      <img src="/" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/aoj-2613-unorderedoperators/">AOJ2613 Unordered Operators</a></h1>
+          <time class="published" datetime="">September 20, 2018</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/rupc2018/" class="image featured">
+    
+      <img src="/" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/rupc2018/">RUPC2018 参加記</a></h1>
+          <time class="published" datetime="">April 1, 2018</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/atcoder-abc088/" class="image featured">
+    
+      <img src="/" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/atcoder-abc088/">ABC088</a></h1>
+          <time class="published" datetime="">February 18, 2018</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">See more</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/%E7%AB%B6%E3%83%97%E3%83%AD/">競プロ<span class="count">6</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/atcoder/">atcoder<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/aoj/">aoj<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/disqus/">disqus<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hugo/">hugo<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/rupc/">rupc<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9/">インフラ<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/%E5%88%9D%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6/">初めまして<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  <section id="mini-bio">
+    <header>
+      <h1>About</h1>
+    </header>
+    <p>雰囲気でプログラミングをしています。好きなフレームワークはFlutterです。</p>
+    <footer>
+      <a href="/about" class="button">Learn More</a>
+    </footer>
+  </section>
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+    <li><a href="/categories/atcoder/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fas fa-rss"></a></li>
+
+
+        <li><a href="//github.com/mkan0141" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/mkan_0141" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2019
+      
+        mkan0141&#39;s blog
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.60.1' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/dart.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/go.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-104912467-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    </div>
+  </body>
+</html>
