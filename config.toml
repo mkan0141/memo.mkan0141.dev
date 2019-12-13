@@ -1,11 +1,11 @@
 baseurl                 = "https://mkan0141.github.io/"
 DefaultContentLanguage  = "en"
-title                   = "みかんのログ"
+title                   = "mkan0141's blog"
 theme                   = "hugo-future-imperfect-slim"
 preserveTaxonomyNames   = true
 paginate                = 3
 disqusShortname         = ""
-googleAnalytics         = "UA-104912467-2"
+# googleAnalytics         = "UA-104912467-2"
 pluralizeListTitles     = false
 disableLanguages        = [""]
 
@@ -47,7 +47,7 @@ disableLanguages        = [""]
 
   [params.header]
     # Sets the navbarTitle that appears in the top left of the navigation bar
-    navbarTitle         = "mkan0141's log"
+    navbarTitle         = "mkan0141's blog"
     # Sets navbarTitle to match the section of the website
     dynamicTitles       = true
     searchMenu          = true
@@ -72,7 +72,7 @@ disableLanguages        = [""]
       alt                 = ""
 
   [params.sidebar]
-    about               = "関西の大学で情報科学を勉強しています。プログラミングはできるかできないかでいうとできないです。好きなフレームワークはFlutterです。"
+    about               = "雰囲気でプログラミングをしています。好きなフレームワークはFlutterです。"
     # Sets the number of recent posts to show in the sidebar. The default value is 5.
     postAmount          = 5
     # set to show or to hide categories in the sidebar
