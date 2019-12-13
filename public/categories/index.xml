@@ -1,33 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on みかんのログ</title>
+    <title>Categories on mkan0141&#39;s blog</title>
     <link>https://mkan0141.github.io/categories/</link>
-    <description>Recent content in Categories on みかんのログ</description>
+    <description>Recent content in Categories on mkan0141&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mkan0141.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Dart</title>
-      <link>https://mkan0141.github.io/categories/dart/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mkan0141.github.io/categories/dart/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Flutter</title>
-      <link>https://mkan0141.github.io/categories/flutter/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mkan0141.github.io/categories/flutter/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>初めまして</title>
