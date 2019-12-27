@@ -5,7 +5,7 @@
     <link>https://mkan0141.dev/blog/</link>
     <description>Recent content in Blog on mkan0141&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>ja</language>
     <lastBuildDate>Fri, 13 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mkan0141.dev/blog/index.xml" rel="self" type="application/rss+xml" />
@@ -50,7 +50,7 @@
       
       <guid>https://mkan0141.dev/blog/aoj-1619-makinglunchboxes/</guid>
       <description>問題 Making Lunch Boxes
-解法 制約に N * M &amp;lt;= 500と書いていて，NとMはどちらかが必ず22以下になるが分かる． これに気がつけば，N &amp;lt;= 22の時はレシピを使うか使わないかの全探索， M &amp;lt;= 22の時は材料を使うか使わないかのbitDPをすれば良い． bitDPの漸化式は dp[][] = max(dp[][], dp[][])
+解法 制約に N * M &amp;lt;= 500と書いていて，NとMはどちらかが必ず22以下になるが分かる． これに気がつけば，N &amp;lt;= 22の時はレシピを使うか使わないかの全探索， M &amp;lt;= 22の時は材料を使うか使わないかのbitDPをすれば良い．
 ソースコード typedef long long ll; bool b[505][505]; ll lists[505]; /* ---- bitDP part ----*/ void init_bitDP(int n,int m){ /* create bit list */ for(int i=0;i&amp;lt;n;i++){ lists[i]=0; for(int j=0;j&amp;lt;m;j++){ if(b[i][j])lists[i]|=(1&amp;lt;&amp;lt;j); } } } int bitDP(int n,int m){ vector&amp;lt;vector&amp;lt;int&amp;gt; &amp;gt;dp(n+1,vector&amp;lt;int&amp;gt;((1&amp;lt;&amp;lt;m),-1)); for(int i=0;i&amp;lt;n;i++){ for(int j=0;j&amp;lt;(1&amp;lt;&amp;lt;m);j++){ dp[i][j]=-INF; } } dp[0][0]=0; for(int i=1;i&amp;lt;=n;i++){ for(int j=0;j&amp;lt;(1&amp;lt;&amp;lt;m);j++){ dp[i][j]=max(dp[i-1][j],dp[i-1][j^lists[i-1]]+1); } } return dp[n][0]; } /* ---- dfs part ---- */ void init_dfs(bool used[]){ for(int i=0;i&amp;lt;505;i++){ used[i]=false; } } int dfs_calc(int n,int m,bool used[]){ int ret=0; for(int i=0;i&amp;lt;n;i++)ret+=used[i]; for(int i=0;i&amp;lt;m;i++){ int sum=0; for(int j=0;j&amp;lt;n;j++){ if(used[j])sum+=b[j][i]; } if(sum%2)return -1; } return ret; } int dfs(int n,int m,int cnt,bool used[]){ int ret=0; if(n==cnt){ return dfs_calc(n,m,used); } used[cnt]=true; ret=max(ret,dfs(n,m,cnt+1,used)); used[cnt]=false; ret=max(ret,dfs(n,m,cnt+1,used)); return ret; } /* ---- main ---- */ void solve(int n,int m){ char c; for(int i=0;i&amp;lt;n;i++){ for(int j=0;j&amp;lt;m;j++){ cin&amp;gt;&amp;gt;c; b[i][j]=c-&amp;#39;0&amp;#39;; } } if(n&amp;lt;=m){ bool used[505]; init_dfs(used); cout&amp;lt;&amp;lt;dfs(n,m,0,used)&amp;lt;&amp;lt;endl; }else{ init_bitDP(n,m); cout&amp;lt;&amp;lt;bitDP(n,m)&amp;lt;&amp;lt;endl;; } } int main(){ int n,m; while(scanf(&amp;#34;%d%d&amp;#34;,&amp;amp;n,&amp;amp;m),n|m){ solve(n,m); } return 0; } </description>
     </item>
     

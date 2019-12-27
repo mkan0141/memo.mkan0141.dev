@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
   <meta charset="utf-8">
 <title>AOJ 1619 弁当作り (Making Lunch Boxes) - mkan0141&#39;s blog</title>
@@ -10,11 +10,11 @@
   <meta name="generator" content="Hugo 0.60.1" />
   <meta itemprop="name" content="AOJ 1619 弁当作り (Making Lunch Boxes)">
 <meta itemprop="description" content="問題 Making Lunch Boxes
-解法 制約に N * M &lt;= 500と書いていて，NとMはどちらかが必ず22以下になるが分かる． これに気がつけば，N &lt;= 22の時はレシピを使うか使わないかの全探索， M &lt;= 22の時は材料を使うか使わないかのbitDPをすれば良い． bitDPの漸化式は dp[][] = max(dp[][], dp[][])
+解法 制約に N * M &lt;= 500と書いていて，NとMはどちらかが必ず22以下になるが分かる． これに気がつけば，N &lt;= 22の時はレシピを使うか使わないかの全探索， M &lt;= 22の時は材料を使うか使わないかのbitDPをすれば良い．
 ソースコード typedef long long ll; bool b[505][505]; ll lists[505]; /* ---- bitDP part ----*/ void init_bitDP(int n,int m){ /* create bit list */ for(int i=0;i&lt;n;i&#43;&#43;){ lists[i]=0; for(int j=0;j&lt;m;j&#43;&#43;){ if(b[i][j])lists[i]|=(1&lt;&lt;j); } } } int bitDP(int n,int m){ vector&lt;vector&lt;int&gt; &gt;dp(n&#43;1,vector&lt;int&gt;((1&lt;&lt;m),-1)); for(int i=0;i&lt;n;i&#43;&#43;){ for(int j=0;j&lt;(1&lt;&lt;m);j&#43;&#43;){ dp[i][j]=-INF; } } dp[0][0]=0; for(int i=1;i&lt;=n;i&#43;&#43;){ for(int j=0;j&lt;(1&lt;&lt;m);j&#43;&#43;){ dp[i][j]=max(dp[i-1][j],dp[i-1][j^lists[i-1]]&#43;1); } } return dp[n][0]; } /* ---- dfs part ---- */ void init_dfs(bool used[]){ for(int i=0;i&lt;505;i&#43;&#43;){ used[i]=false; } } int dfs_calc(int n,int m,bool used[]){ int ret=0; for(int i=0;i&lt;n;i&#43;&#43;)ret&#43;=used[i]; for(int i=0;i&lt;m;i&#43;&#43;){ int sum=0; for(int j=0;j&lt;n;j&#43;&#43;){ if(used[j])sum&#43;=b[j][i]; } if(sum%2)return -1; } return ret; } int dfs(int n,int m,int cnt,bool used[]){ int ret=0; if(n==cnt){ return dfs_calc(n,m,used); } used[cnt]=true; ret=max(ret,dfs(n,m,cnt&#43;1,used)); used[cnt]=false; ret=max(ret,dfs(n,m,cnt&#43;1,used)); return ret; } /* ---- main ---- */ void solve(int n,int m){ char c; for(int i=0;i&lt;n;i&#43;&#43;){ for(int j=0;j&lt;m;j&#43;&#43;){ cin&gt;&gt;c; b[i][j]=c-&#39;0&#39;; } } if(n&lt;=m){ bool used[505]; init_dfs(used); cout&lt;&lt;dfs(n,m,0,used)&lt;&lt;endl; }else{ init_bitDP(n,m); cout&lt;&lt;bitDP(n,m)&lt;&lt;endl;; } } int main(){ int n,m; while(scanf(&#34;%d%d&#34;,&amp;n,&amp;m),n|m){ solve(n,m); } return 0; } ">
 <meta itemprop="datePublished" content="2019-05-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-05-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="173">
+<meta itemprop="wordCount" content="168">
 <meta itemprop="image" content="https://mkan0141.dev/">
 
 
@@ -22,7 +22,7 @@
 <meta itemprop="keywords" content="" />
   <meta property="og:title" content="AOJ 1619 弁当作り (Making Lunch Boxes)" />
 <meta property="og:description" content="問題 Making Lunch Boxes
-解法 制約に N * M &lt;= 500と書いていて，NとMはどちらかが必ず22以下になるが分かる． これに気がつけば，N &lt;= 22の時はレシピを使うか使わないかの全探索， M &lt;= 22の時は材料を使うか使わないかのbitDPをすれば良い． bitDPの漸化式は dp[][] = max(dp[][], dp[][])
+解法 制約に N * M &lt;= 500と書いていて，NとMはどちらかが必ず22以下になるが分かる． これに気がつけば，N &lt;= 22の時はレシピを使うか使わないかの全探索， M &lt;= 22の時は材料を使うか使わないかのbitDPをすれば良い．
 ソースコード typedef long long ll; bool b[505][505]; ll lists[505]; /* ---- bitDP part ----*/ void init_bitDP(int n,int m){ /* create bit list */ for(int i=0;i&lt;n;i&#43;&#43;){ lists[i]=0; for(int j=0;j&lt;m;j&#43;&#43;){ if(b[i][j])lists[i]|=(1&lt;&lt;j); } } } int bitDP(int n,int m){ vector&lt;vector&lt;int&gt; &gt;dp(n&#43;1,vector&lt;int&gt;((1&lt;&lt;m),-1)); for(int i=0;i&lt;n;i&#43;&#43;){ for(int j=0;j&lt;(1&lt;&lt;m);j&#43;&#43;){ dp[i][j]=-INF; } } dp[0][0]=0; for(int i=1;i&lt;=n;i&#43;&#43;){ for(int j=0;j&lt;(1&lt;&lt;m);j&#43;&#43;){ dp[i][j]=max(dp[i-1][j],dp[i-1][j^lists[i-1]]&#43;1); } } return dp[n][0]; } /* ---- dfs part ---- */ void init_dfs(bool used[]){ for(int i=0;i&lt;505;i&#43;&#43;){ used[i]=false; } } int dfs_calc(int n,int m,bool used[]){ int ret=0; for(int i=0;i&lt;n;i&#43;&#43;)ret&#43;=used[i]; for(int i=0;i&lt;m;i&#43;&#43;){ int sum=0; for(int j=0;j&lt;n;j&#43;&#43;){ if(used[j])sum&#43;=b[j][i]; } if(sum%2)return -1; } return ret; } int dfs(int n,int m,int cnt,bool used[]){ int ret=0; if(n==cnt){ return dfs_calc(n,m,used); } used[cnt]=true; ret=max(ret,dfs(n,m,cnt&#43;1,used)); used[cnt]=false; ret=max(ret,dfs(n,m,cnt&#43;1,used)); return ret; } /* ---- main ---- */ void solve(int n,int m){ char c; for(int i=0;i&lt;n;i&#43;&#43;){ for(int j=0;j&lt;m;j&#43;&#43;){ cin&gt;&gt;c; b[i][j]=c-&#39;0&#39;; } } if(n&lt;=m){ bool used[505]; init_dfs(used); cout&lt;&lt;dfs(n,m,0,used)&lt;&lt;endl; }else{ init_bitDP(n,m); cout&lt;&lt;bitDP(n,m)&lt;&lt;endl;; } } int main(){ int n,m; while(scanf(&#34;%d%d&#34;,&amp;n,&amp;m),n|m){ solve(n,m); } return 0; } " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mkan0141.dev/blog/aoj-1619-makinglunchboxes/" />
@@ -35,7 +35,7 @@
 
 <meta name="twitter:title" content="AOJ 1619 弁当作り (Making Lunch Boxes)"/>
 <meta name="twitter:description" content="問題 Making Lunch Boxes
-解法 制約に N * M &lt;= 500と書いていて，NとMはどちらかが必ず22以下になるが分かる． これに気がつけば，N &lt;= 22の時はレシピを使うか使わないかの全探索， M &lt;= 22の時は材料を使うか使わないかのbitDPをすれば良い． bitDPの漸化式は dp[][] = max(dp[][], dp[][])
+解法 制約に N * M &lt;= 500と書いていて，NとMはどちらかが必ず22以下になるが分かる． これに気がつけば，N &lt;= 22の時はレシピを使うか使わないかの全探索， M &lt;= 22の時は材料を使うか使わないかのbitDPをすれば良い．
 ソースコード typedef long long ll; bool b[505][505]; ll lists[505]; /* ---- bitDP part ----*/ void init_bitDP(int n,int m){ /* create bit list */ for(int i=0;i&lt;n;i&#43;&#43;){ lists[i]=0; for(int j=0;j&lt;m;j&#43;&#43;){ if(b[i][j])lists[i]|=(1&lt;&lt;j); } } } int bitDP(int n,int m){ vector&lt;vector&lt;int&gt; &gt;dp(n&#43;1,vector&lt;int&gt;((1&lt;&lt;m),-1)); for(int i=0;i&lt;n;i&#43;&#43;){ for(int j=0;j&lt;(1&lt;&lt;m);j&#43;&#43;){ dp[i][j]=-INF; } } dp[0][0]=0; for(int i=1;i&lt;=n;i&#43;&#43;){ for(int j=0;j&lt;(1&lt;&lt;m);j&#43;&#43;){ dp[i][j]=max(dp[i-1][j],dp[i-1][j^lists[i-1]]&#43;1); } } return dp[n][0]; } /* ---- dfs part ---- */ void init_dfs(bool used[]){ for(int i=0;i&lt;505;i&#43;&#43;){ used[i]=false; } } int dfs_calc(int n,int m,bool used[]){ int ret=0; for(int i=0;i&lt;n;i&#43;&#43;)ret&#43;=used[i]; for(int i=0;i&lt;m;i&#43;&#43;){ int sum=0; for(int j=0;j&lt;n;j&#43;&#43;){ if(used[j])sum&#43;=b[j][i]; } if(sum%2)return -1; } return ret; } int dfs(int n,int m,int cnt,bool used[]){ int ret=0; if(n==cnt){ return dfs_calc(n,m,used); } used[cnt]=true; ret=max(ret,dfs(n,m,cnt&#43;1,used)); used[cnt]=false; ret=max(ret,dfs(n,m,cnt&#43;1,used)); return ret; } /* ---- main ---- */ void solve(int n,int m){ char c; for(int i=0;i&lt;n;i&#43;&#43;){ for(int j=0;j&lt;m;j&#43;&#43;){ cin&gt;&gt;c; b[i][j]=c-&#39;0&#39;; } } if(n&lt;=m){ bool used[505]; init_dfs(used); cout&lt;&lt;dfs(n,m,0,used)&lt;&lt;endl; }else{ init_bitDP(n,m); cout&lt;&lt;bitDP(n,m)&lt;&lt;endl;; } } int main(){ int n,m; while(scanf(&#34;%d%d&#34;,&amp;n,&amp;m),n|m){ solve(n,m); } return 0; } "/>
 <meta name="twitter:site" content="@mkan_0141"/>
 
@@ -52,7 +52,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
       
       
-      <link rel="stylesheet" href="/css/main.min.2160e9d3bf8a3623e64090cc3bc57adb6a070f9334d3ce19ae0f1021d6900093.css" integrity="sha256-IWDp07&#43;KNiPmQJDMO8V622oHD5M0084Zrg8QIdaQAJM=">
+      <link rel="stylesheet" href="/css/main.min.8071162d8e82975731fda3e21dba72845d8d5de2c7bd0664e11d77e1c5913dfe.css" integrity="sha256-gHEWLY6Cl1cx/aPiHbpyhF2NXeLHvQZk4R134cWRPf4=">
       <link rel="stylesheet" href="/css/add-on.css">
     
   
@@ -249,7 +249,7 @@
     </time>
     <span class="author">mkan0141</span>
     
-      <p>1 minute read</p>
+      <p>1 minutes read</p>
     
   </div>
 </header>
@@ -259,8 +259,7 @@
 <p><a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1619&amp;lang=jp">Making Lunch Boxes</a></p>
 <h2 id="heading1">解法</h2>
 <p>制約に N * M &lt;= 500と書いていて，NとMはどちらかが必ず22以下になるが分かる．
-これに気がつけば，N &lt;= 22の時はレシピを使うか使わないかの全探索， M &lt;= 22の時は材料を使うか使わないかのbitDPをすれば良い．
-bitDPの漸化式は dp[][] = max(dp[][], dp[][])</p>
+これに気がつけば，N &lt;= 22の時はレシピを使うか使わないかの全探索， M &lt;= 22の時は材料を使うか使わないかのbitDPをすれば良い．</p>
 <h2 id="heading2">ソースコード</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> ll;
 

@@ -6,8 +6,13 @@
     <loc>https://mkan0141.dev/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="ja"
                 href="https://mkan0141.dev/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mkan0141.dev/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -35,8 +40,13 @@
     <loc>https://mkan0141.dev/fr/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="ja"
                 href="https://mkan0141.dev/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mkan0141.dev/en/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -65,6 +75,11 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
+                href="https://mkan0141.dev/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
                 href="https://mkan0141.dev/tags/"
                 />
     <xhtml:link
