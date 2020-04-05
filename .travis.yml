@@ -1,12 +1,22 @@
 language: go
 dist: trusty
+sudo: false
 
 branches:
   only:
   - master
 
+env:
+  - HUGO_VERSION=0.60.1
+
+install: true
+
+before_script:
+  - wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb
+  - sudo dpkg -i hugo_${HUGO_VERSION}_Linux-64bit.deb
+
 script:
-  - echo "Skipping tests"
+  - hugo -v
 
 deploy:
   provider: pages
