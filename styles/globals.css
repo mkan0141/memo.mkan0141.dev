@@ -31,8 +31,12 @@
   @apply italic;
 }
 
-.entry-body > code {
-  @apply rounded-sm bg-slate-200 px-0.5 py-px;
+.entry-body > blockquote {
+  @apply border-l-4 border-gray-300 bg-gray-50 px-4 py-4;
+}
+
+.entry-body > p > code {
+  @apply rounded-md bg-gray-200 p-1;
 }
 
 .entry-body > ul {
