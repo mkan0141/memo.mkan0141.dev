@@ -1,3 +1,49 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.entry-body {
+  @apply text-base;
+  font-family: "i-sans-serif", "system-ui", "-apple-system";
+}
+
+.entry-body > h1 {
+  @apply text-3xl font-bold;
+}
+
+.entry-body > h2 {
+  @apply mt-8 mb-4 text-2xl font-bold;
+}
+
+.entry-body > h3 {
+  @apply text-xl;
+}
+
+.entry-body > p {
+  @apply my-4;
+}
+
+.entry-body > strong {
+  @apply font-semibold;
+}
+
+.entry-body > em {
+  @apply italic;
+}
+
+.entry-body > code {
+  @apply rounded-sm bg-slate-200 px-0.5 py-px;
+}
+
+.entry-body > ul {
+  @apply list-inside list-disc;
+}
+
+.entry-body > ol {
+  @apply my-3 list-inside list-decimal;
+}
+
+.entry-body > ul > li,
+.entry-body > ol > li {
+  @apply my-2;
+}
