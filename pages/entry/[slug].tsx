@@ -1,5 +1,6 @@
 import { markdownToHtml } from "lib/markdown";
 import { getAllPostNames, getPost } from "lib/blog";
+import "prismjs/themes/prism-tomorrow.min.css";
 
 type Props = {
   html: any;
@@ -19,7 +20,7 @@ const Post = (props: Props) => {
         </div>
         <div
           className="entry-body"
-          dangerouslySetInnerHTML={{ __html: props.html }}
+          dangerouslySetInnerHTML={{ __html: html }}
         />
       </article>
     </>
