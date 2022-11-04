@@ -19,23 +19,23 @@
   @apply text-xl;
 }
 
-.entry-body > p {
+.entry-body p {
   @apply my-4;
 }
 
-.entry-body > strong {
+.entry-body strong {
   @apply font-semibold;
 }
 
-.entry-body > em {
+.entry-body em {
   @apply italic;
 }
 
-.entry-body > blockquote {
+.entry-body blockquote {
   @apply border-l-4 border-gray-300 bg-gray-50 px-4 py-4;
 }
 
-.entry-body > p > code {
+.entry-body > code {
   @apply rounded-md bg-gray-200 p-1;
 }
 
