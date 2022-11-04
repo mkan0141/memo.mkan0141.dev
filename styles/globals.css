@@ -51,3 +51,7 @@
 .entry-body > ol > li {
   @apply my-2;
 }
+
+.entry-body pre {
+  @apply rounded-md;
+}
