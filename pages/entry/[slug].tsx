@@ -6,6 +6,7 @@ type Props = {
   data: any;
 };
 
+ 
 const Post = (props: Props) => {
   const { html, data } = props;
   const { title, publish_at } = data;
