@@ -5,11 +5,11 @@ jobs:
     name: check eslint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 14
           cache: yarn
-          cache-dependency-path: ./yarn.lock
       - run: yarn install
       - uses: reviewdog/action-eslint@v1
         with:
