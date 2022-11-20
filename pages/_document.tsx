@@ -7,6 +7,7 @@ const Document = () => {
       <body>
         <Main></Main>
         <NextScript></NextScript>
+        <img></img>
       </body>
     </Html>
   );
