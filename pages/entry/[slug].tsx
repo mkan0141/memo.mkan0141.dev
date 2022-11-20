@@ -16,10 +16,12 @@ const Post = (props: Props) => {
 
   return (
     <>
-      <article className="mt-8">
-        <div className="">
-          <h1 className="text-3xl font-bold">{title}</h1>
-          <time className="mt-8">{publish_at}</time>
+      <article>
+        <div>
+          <h1 className="text-4xl font-bold text-zinc-700">{title}</h1>
+          <div className="mt-2 text-zinc-500">
+            <time className="">{publish_at}</time>
+          </div>
         </div>
         <div
           className="entry-body mt-4"
