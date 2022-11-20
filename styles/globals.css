@@ -2,25 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply text-zinc-700;
+}
+
+a {
+  @apply text-orange-600;
+}
+
 .entry-body {
   @apply text-base;
-  font-family: "i-sans-serif", "system-ui", "-apple-system";
+  font-family: "M PLUS 1p", "i-sans-serif", "system-ui", "-apple-system";
 }
 
 .entry-body > h1 {
-  @apply text-3xl font-bold;
+  @apply text-4xl font-bold;
 }
 
 .entry-body > h2 {
-  @apply mt-8 mb-4 text-2xl font-bold;
+  @apply mt-8 mb-4 text-3xl font-bold;
 }
 
 .entry-body > h3 {
-  @apply text-xl;
+  @apply text-2xl font-bold;
+}
+
+.entry-body > h4 {
+  @apply text-xl font-bold;
 }
 
 .entry-body p {
-  @apply my-4;
+  @apply my-8 text-base;
 }
 
 .entry-body strong {
@@ -32,11 +44,11 @@
 }
 
 .entry-body blockquote {
-  @apply border-l-4 border-gray-300 bg-gray-50 px-4 py-4;
+  @apply border-l-4 border-l-orange-200 bg-gray-50 px-4 py-4;
 }
 
-.entry-body > code {
-  @apply rounded-md bg-gray-200 p-1;
+.entry-body > p > code {
+  @apply rounded-md border border-gray-200 bg-gray-50 p-1;
 }
 
 .entry-body > ul {
