@@ -2,37 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply text-zinc-700;
+}
+
+a {
+  @apply text-orange-600;
+}
+
 .entry-body {
   @apply text-base;
-  font-family: "i-sans-serif", "system-ui", "-apple-system";
+  font-family: "M PLUS 1p", "i-sans-serif", "system-ui", "-apple-system";
 }
 
 .entry-body > h1 {
-  @apply text-3xl font-bold;
+  @apply text-4xl font-bold;
 }
 
 .entry-body > h2 {
-  @apply mt-8 mb-4 text-2xl font-bold;
+  @apply mt-8 mb-4 text-3xl font-bold;
 }
 
 .entry-body > h3 {
-  @apply text-xl;
+  @apply text-2xl font-bold;
 }
 
-.entry-body > p {
-  @apply my-4;
+.entry-body > h4 {
+  @apply text-xl font-bold;
 }
 
-.entry-body > strong {
+.entry-body p {
+  @apply my-8 text-base;
+}
+
+.entry-body strong {
   @apply font-semibold;
 }
 
-.entry-body > em {
+.entry-body em {
   @apply italic;
 }
 
-.entry-body > code {
-  @apply rounded-sm bg-slate-200 px-0.5 py-px;
+.entry-body blockquote {
+  @apply border-l-4 border-l-orange-200 bg-gray-50 px-4 py-4;
+}
+
+.entry-body > p > code {
+  @apply rounded-md border border-gray-200 bg-gray-50 p-1;
 }
 
 .entry-body > ul {
@@ -46,4 +62,8 @@
 .entry-body > ul > li,
 .entry-body > ol > li {
   @apply my-2;
+}
+
+.entry-body pre {
+  @apply rounded-md;
 }

@@ -1,5 +1,13 @@
+import Link from "next/link";
+
 const Header = () => {
-  return <header></header>;
+  return (
+    <header className="my-8 font-extrabold">
+      <Link href="/" className="text-xl text-orange-500">
+        みかんめも
+      </Link>
+    </header>
+  );
 };
 
 export default Header;
