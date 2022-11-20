@@ -1,8 +1,8 @@
-import type { GetStaticProps, NextPage } from "next";
-import Link from "next/link";
-import Layout from "components/layout";
+import type { GetStaticProps, NextPage } from 'next';
+import Link from 'next/link';
+import Layout from 'components/layout';
 
-import { getAllPosts } from "lib/blog";
+import { getAllPosts } from 'lib/blog';
 
 const Home: NextPage = (props: Post[]) => {
   return (

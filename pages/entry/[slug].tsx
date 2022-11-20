@@ -1,7 +1,7 @@
-import { markdownToHtml } from "lib/markdown";
-import { getAllPostNames, getPost } from "lib/blog";
-import "prismjs/themes/prism-tomorrow.min.css";
-import { GetStaticPropsContext } from "next";
+import { markdownToHtml } from 'lib/markdown';
+import { getAllPostNames, getPost } from 'lib/blog';
+import 'prismjs/themes/prism-tomorrow.min.css';
+import { GetStaticPropsContext } from 'next';
 
 type Props = {
   title: string;

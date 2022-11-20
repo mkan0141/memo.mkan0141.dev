@@ -1,6 +1,6 @@
-import fs from "fs";
-import { join } from "path";
-import matter from "gray-matter";
+import fs from 'fs';
+import { join } from 'path';
+import matter from 'gray-matter';
 
 type Post = {
   title: string;
@@ -10,19 +10,19 @@ type Post = {
   content: string;
 };
 
-const postsDir = join(process.cwd(), "_posts");
+const postsDir = join(process.cwd(), '_posts');
 
 const getPostFileNames = (): string[] => {
   return fs.readdirSync(postsDir);
 };
 
 const getAllPostNames = (): string[] => {
-  return getPostFileNames().map((postName) => postName.replace(/\.md$/g, ""));
+  return getPostFileNames().map((postName) => postName.replace(/\.md$/g, ''));
 };
 
 const getPostContent = (postName: string): Post => {
   const postFilePath = join(postsDir, `${postName}.md`);
-  const postContent = fs.readFileSync(postFilePath, "utf-8");
+  const postContent = fs.readFileSync(postFilePath, 'utf-8');
   const { data, content } = matter(postContent);
 
   return {
