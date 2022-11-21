@@ -4,10 +4,10 @@ import Layout from 'components/layout';
 
 import { getAllPosts } from 'lib/blog';
 
-const Home: NextPage = (props: Post[]) => {
+const Home: NextPage = (props: any) => {
   return (
     <div className="mt-8">
-      {props.posts.map((post) => (
+      {props.posts.map((post: any) => (
         <li className="mt-6 list-none" key={post.title}>
           <div className="text-sm text-zinc-500">
             <time>{post.publish_at}</time>
