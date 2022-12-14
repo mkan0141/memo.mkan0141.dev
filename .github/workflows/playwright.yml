@@ -3,6 +3,11 @@ on:
   pull_request:
     branches:
       - master
+    paths:
+      - 'components/**/*'
+      - 'lib/**/*'
+      - 'pages/**/*'
+      - 'styles/**/*'
 jobs:
   test:
     timeout-minutes: 5
