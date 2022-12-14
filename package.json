@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test:e2e": "playwright test",
     "lint:next": "next lint",
     "lint:prettier": "prettier pages components lib --check"
   },
@@ -20,6 +21,7 @@
     "remark-stringify": "^10.0.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.28.1",
     "@types/node": "18.7.14",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",

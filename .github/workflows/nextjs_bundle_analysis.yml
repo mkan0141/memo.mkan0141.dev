@@ -1,10 +1,15 @@
 name: 'Next.js Bundle Analysis'
 
 on:
-  pull_request:
   push:
+  pull_request:
     branches:
-      - main # change this if your default branch is named differently
+      - master
+    paths:
+      - 'components/**/*'
+      - 'lib/**/*'
+      - 'pages/**/*'
+      - 'styles/**/*'
   workflow_dispatch:
 
 defaults:
