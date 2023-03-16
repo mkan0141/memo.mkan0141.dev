@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 const Document = () => {
   return (
-    <Html>
+    <Html lang="ja">
       <Head>
         <link
           href="https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap"
