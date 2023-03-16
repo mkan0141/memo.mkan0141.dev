@@ -2,6 +2,7 @@ import { markdownToHtml } from 'lib/markdown';
 import { getAllPostNames, getPost } from 'lib/blog';
 import 'prismjs/themes/prism-tomorrow.min.css';
 import { GetStaticPropsContext } from 'next';
+import Head from 'next/head';
 
 type Props = {
   title: string;
@@ -16,6 +17,9 @@ const Post = (props: Props) => {
 
   return (
     <>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <article>
         <div>
           <h1 className="text-4xl font-bold text-zinc-700">{title}</h1>
