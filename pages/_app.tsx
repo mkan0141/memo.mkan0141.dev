@@ -3,6 +3,12 @@ import type { AppProps } from 'next/app';
 import Layout from 'components/layout';
 import Script from 'next/script';
 import Head from 'next/head';
+import { Noto_Sans_JP } from 'next/font/google';
+
+const notoSansJp = Noto_Sans_JP({
+  weight: ['400', '700'],
+  preload: false,
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -24,7 +30,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           gtag('config', 'G-P2YRZ64G57');
         `}
       </Script>
-      <Component {...pageProps} />
+      <main className={notoSansJp.className}>
+        <Component {...pageProps} />
+      </main>
     </Layout>
   );
 }
