@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body {
-  @apply bg-slate-50;
+  @apply text-zinc-700;
 }
 
 a {
-  @apply text-orange-700;
+  @apply text-orange-600;
 }
 
 .entry-body {
@@ -47,7 +47,7 @@ a {
   @apply border-l-4 border-l-orange-200 bg-gray-50 px-4 py-4;
 }
 
-.entry-body :not(pre) > code {
+.entry-body > p > code {
   @apply rounded-md border border-gray-200 bg-gray-50 p-1;
 }
 
